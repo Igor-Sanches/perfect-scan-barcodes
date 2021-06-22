@@ -1,6 +1,9 @@
 # Perfect Scan: Barcodes é uma plataforma desenvolvida em C# para UWP (Universal Windows Plataform) capaz de gerar, e ler diversos tipos de códigos é uma marca registrada e não aceitamos uma clonagem destes códigos, o Soft esta publicado na Loja de Aplicativos, não podemos disponibilizar o link por conta do soft esta indisponível na loja de apps, estamos atualizando antes de ativar, mais o intercessor do soft esta.
 Link: https://www.microsoft.com/pt-br/p/perfect-scan/9mv5tvr2dnk2?cid=msft_web_chart&activetab=pivot:overviewtab
 
+O sistema tem integração com a nuvem, sincronizando em tempo real os dados com outros dispositivos
+Tecnologia Firebase usada para db em nuvem e Sqlite para db local
+
 Fotos de demonstração da versão do código:
 
 ![Captura de tela 2021-06-22 131725](https://user-images.githubusercontent.com/34573915/122964031-3df7c780-d35d-11eb-94a5-54db7a637c4c.jpg)
