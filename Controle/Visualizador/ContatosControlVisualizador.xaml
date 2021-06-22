@@ -1,0 +1,98 @@
+﻿<UserControl
+    x:Class="Perfect_Scan.Controle.Visualizador.ContatosControlVisualizador"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Perfect_Scan.Controle.Visualizador"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+     xmlns:Windows10version1809="http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsApiContractPresent(Windows.Foundation.UniversalApiContract, 7)"
+    xmlns:control="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    mc:Ignorable="d" 
+    xmlns:items="using:Perfect_Scan.Models">
+
+    <Grid Background="{ThemeResource SubBackground}">
+
+        <TextBlock HorizontalAlignment="Center"
+                   Margin="30"
+                   x:Uid="textoerroloadercontact"
+                   Visibility="Collapsed"
+                   Foreground="{ThemeResource SubTexto}"/>
+
+        <ProgressRing Visibility="Collapsed"
+                      IsActive="True"
+                      Height="50"
+                      Width="50"/>
+
+        <StackPanel Visibility="Collapsed">
+            <Grid >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Margin="20" Orientation="Horizontal" Height="50">
+                    <control:ImageEx Source="/Assets/contato.png"/>
+                    <StackPanel Margin="12,0,0,0" Orientation="Vertical" VerticalAlignment="Center" >
+                        <TextBlock Text="Igor Dutra Sanches" Style="{ThemeResource BaseTextBlockStyle}" Foreground="{ThemeResource Texto}" />
+                        <TextBlock x:Uid="contactTitle" Style="{ThemeResource BodyTextBlockStyle}" Foreground="{ThemeResource SubTexto}"/>
+                    </StackPanel>
+                </StackPanel>
+                <Button Style="{ThemeResource ButtonStyleContent}"
+                    Margin="10,0" 
+                    Grid.Column="1">
+                    <TextBlock Text="Salvar"/>
+                </Button>
+            </Grid>
+            <StackPanel>
+                <ScrollViewer Visibility="{Binding ListaContatosElements, Mode=OneWay}">
+                    <ItemsControl Margin="0,10,0,30" ItemsSource="{Binding Lista, Mode=OneWay}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate x:DataType="items:ContatoViewItem">
+                                <Grid Margin="0,5">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel Margin="12,0,0,0" Orientation="Vertical" VerticalAlignment="Center" >
+                                        <TextBlock Text="{Binding Home}" Style="{ThemeResource BaseTextBlockStyle}" Foreground="{ThemeResource Texto}" />
+                                        <TextBlock Text="{Binding SubHome}" Style="{ThemeResource BodyTextBlockStyle}" Foreground="{ThemeResource SubTexto}"/>
+                                    </StackPanel>
+                                    <StackPanel Visibility="{Binding LayoutOuters}" Grid.Column="1" Orientation="Horizontal">
+                                        <Button Height="38"
+                            Margin="10,0"
+                            VerticalAlignment="Center"
+                        Grid.Column="1"
+                        Command="{Binding Call}" 
+                        Style="{ThemeResource ButtonStyleContent}"
+                        HorizontalAlignment="Center"
+                            Content="{Binding ButtonContent}"/>
+                                    </StackPanel>
+                                    <StackPanel Visibility="{Binding LayoutNumber}" VerticalAlignment="Center" Grid.Column="1" Orientation="Horizontal">
+                                        <Button Height="38" 
+                        Command="{Binding DialLauncher}" 
+                    Width="38" 
+                        Style="{ThemeResource ButtonFab}"
+                        HorizontalAlignment="Right">
+                                            <FontIcon Glyph="&#xE75F;"/>
+                                        </Button>
+                                        <Button Height="38"
+                            Margin="10,0 "
+                        Grid.Column="1"
+                        Command="{Binding Call}" 
+                    Width="38" 
+                        Style="{ThemeResource ButtonFab}"
+                        HorizontalAlignment="Center">
+                                            <FontIcon Glyph="&#xE13A;"/>
+                                        </Button>
+
+                                    </StackPanel>
+                                </Grid>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </ScrollViewer>
+
+
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

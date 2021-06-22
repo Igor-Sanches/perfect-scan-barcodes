@@ -1,0 +1,93 @@
+﻿<Page
+    x:Class="Perfect_Scan.Paginas.Configuracoes"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Perfect_Scan.Paginas"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+            xmlns:MDX="using:Windows.UI.Xaml.Controls?IsApiContractPresent(Windows.Foundation.UniversalApiContract,5)"
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" 
+    xmlns:settings="using:Perfect_Scan.Settings"
+    xmlns:data="using:Perfect_Scan.Data" >
+     <Page.DataContext>
+        <settings:Settings x:Name="key"/>
+    </Page.DataContext>
+
+    <Grid> 
+        <ScrollViewer Margin="10,10,10,20">
+            <StackPanel>
+                <StackPanel Visibility="Collapsed">
+
+                    <ContentPresenter x:Uid="Themes" Foreground="{ThemeResource CorPrimaria}"/>
+
+                    <ToggleSwitch IsOn="{Binding IsDarkMode}" Margin="0,10,0,20" OffContent="" Tag="{x:Bind chave.APP_SETTINGS_DARK_MODE}" x:Uid="DarkMode" Toggled="ToggleSwitch_Toggled" Style="{ThemeResource ToggleSwitchStyle1}"/>
+
+                </StackPanel>
+                <StackPanel>
+
+                    <ContentPresenter x:Uid="WifiLinksSettings" Foreground="{ThemeResource CorPrimaria}"/>
+
+                    <ToggleSwitch IsOn="{Binding IsWifiLaunchConnect}" Margin="0,10,0,8" OffContent="" Tag="{x:Bind chave.APP_SETTINGS_WIFI_LAUNCH_CONNECT}" x:Uid="WifiSettingsLaunch" Toggled="ToggleSwitch_Toggled" Style="{ThemeResource ToggleSwitchStyle1}"/>
+
+                    <Grid Background="{ThemeResource CorLinhaSeparatorConfiguracoes}" Height="1" HorizontalAlignment="Stretch" Margin="0,10"/>
+
+                    <ToggleSwitch IsOn="{Binding IsLinkLaunchRedirect}" Margin="0,8" Tag="{x:Bind chave.APP_SETTINGS_LINK_LAUNCH_REDIRECT}" x:Uid="LinksSettingsLaunch" Toggled="ToggleSwitch_Toggled" Style="{ThemeResource ToggleSwitchStyle1}"/>
+ 
+                </StackPanel>
+
+                <StackPanel>
+
+                    <ContentPresenter x:Uid="Escanear" Foreground="{ThemeResource CorPrimaria}"/>
+
+                    <ToggleSwitch IsOn="{Binding IsUseAutoFocus}" Margin="0,10,0,8" OffContent="" Tag="{x:Bind chave.APP_SETTINGS_AUTO_FOCUS}" x:Uid="useAutoFocus" Toggled="ToggleSwitch_Toggled" Style="{ThemeResource ToggleSwitchStyle1}"/>
+
+                    <Grid Background="{ThemeResource CorLinhaSeparatorConfiguracoes}" Height="1" HorizontalAlignment="Stretch" Margin="0,10"/>
+
+                    <ToggleSwitch IsOn="{Binding IsScanInverso}" Margin="0,8" Tag="{x:Bind chave.APP_SETTINGS_INVERTER_SCAN}" x:Uid="scanInverso" Toggled="ToggleSwitch_Toggled" Style="{ThemeResource ToggleSwitchStyle1}"/>
+
+                    <Grid Background="{ThemeResource CorLinhaSeparatorConfiguracoes}" Height="1" HorizontalAlignment="Stretch" Margin="0,10"/>
+
+                    <ToggleSwitch IsOn="{Binding IsScanEmMassa}" Margin="0,8" Tag="{x:Bind chave.APP_SETTINGS_SCAN_MASSA}" x:Uid="scanEmMassa" Toggled="ToggleSwitch_Toggled" Style="{ThemeResource ToggleSwitchStyle1}"/>
+
+                    <Grid Background="{ThemeResource CorLinhaSeparatorConfiguracoes}" Height="1" HorizontalAlignment="Stretch" Margin="0,10"/>
+
+                    <ToggleSwitch IsOn="{Binding IsBeepScan}" Margin="0,8" OffContent="" Name="BeepScan" Tag="{x:Bind chave.APP_SETTINGS_APTAR}" x:Uid="beepScan" Toggled="ToggleSwitch_Toggled" Style="{ThemeResource ToggleSwitchStyle1}"/>
+
+                    <ToggleSwitch Visibility="Collapsed" IsOn="{Binding IsVibrateScan}" Margin="0,8" OffContent="" Name="VibrateScan" Tag="{x:Bind chave.APP_SETTINGS_VIBRAR}" x:Uid="vibrateScan" Toggled="ToggleSwitch_Toggled" Style="{ThemeResource ToggleSwitchStyle1}"/>
+
+                    <MDX:NavigationViewItem Foreground="{ThemeResource Texto}" Tapped="LaserColor_Tapped" Name="LaserColor" Content="{Binding GetLaserColor}" Margin="0,8" Tag="{x:Bind chave.APP_SETTINGS_LASER_COR}"/>
+
+                </StackPanel>
+
+                <StackPanel Margin="0,15,0,0">
+
+                    <ContentPresenter x:Uid="Historicos" Foreground="{ThemeResource CorPrimaria}"/>
+
+                    <ToggleSwitch IsOn="{Binding IsSalvarEscaneados}" Margin="0,10,0,8" Tag="{x:Bind chave.APP_SETTINGS_SALVAR_ESCANEADOS}" x:Uid="salvarEscaneados" Toggled="ToggleSwitch_Toggled" Style="{ThemeResource ToggleSwitchStyle1}"/>
+
+                    <Grid Background="{ThemeResource CorLinhaSeparatorConfiguracoes}" Height="1" HorizontalAlignment="Stretch" Margin="0,10"/>
+
+                    <ToggleSwitch IsOn="{Binding IsSalvarGerados}" Margin="0,8" Tag="{x:Bind chave.APP_SETTINGS_SALVAR_GERADOS}" x:Uid="salvarGerados" Toggled="ToggleSwitch_Toggled" Style="{ThemeResource ToggleSwitchStyle1}"/>
+
+                </StackPanel>
+
+                <StackPanel Margin="0,15,0,0">
+
+                    <ContentPresenter x:Uid="assistente" Foreground="{ThemeResource CorPrimaria}"/>
+
+                    <ToggleSwitch Visibility="Collapsed" IsOn="{Binding IsFalarResultadoAoEscanear}" Margin="0,10,0,8" Tag="{x:Bind chave.APP_SETTINGS_NARRAR_RESULTADO}" x:Uid="falarResultadoAoEscanear" Toggled="ToggleSwitch_Toggled" Style="{ThemeResource ToggleSwitchStyle1}"/>
+
+                    <Grid Background="{ThemeResource CorLinhaSeparatorConfiguracoes}" Height="1" HorizontalAlignment="Stretch" Margin="0,10"/>
+                    
+                    <ToggleSwitch IsOn="{Binding IsFalarResultadoAoEscanearMassa}" Margin="0,8" Tag="{x:Bind chave.APP_SETTINGS_NARRAR_RESULTADO_MASSA}" x:Uid="falarResultadoAoEscanearMassa" Toggled="ToggleSwitch_Toggled" Style="{ThemeResource ToggleSwitchStyle1}"/>
+
+                    <Grid Background="{ThemeResource CorLinhaSeparatorConfiguracoes}" Height="1" HorizontalAlignment="Stretch" Margin="0,10"/>
+
+                    <MDX:NavigationViewItem Foreground="{ThemeResource Texto}" Name="NarrarMassa" Tapped="NarrarMassa_Tapped" IsEnabled="{Binding IsFalarResultadoAoEscanearMassa}" Tag="{x:Bind chave.APP_SETTINGS_TIPO_NARRAR}" Margin="0,8" Content="{Binding GetTipoCodigo}"/>
+
+                </StackPanel>
+            </StackPanel>
+
+        </ScrollViewer>
+    </Grid>
+</Page>

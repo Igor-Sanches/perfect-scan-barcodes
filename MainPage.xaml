@@ -1,0 +1,110 @@
+﻿<Page
+    x:Class="Perfect_Scan.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Perfect_Scan"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Windows10version1809="http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsApiContractPresent(Windows.Foundation.UniversalApiContract, 7)"
+    mc:Ignorable="d" Background="{ThemeResource Background}" >
+    
+
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Pivot Name="splitView" SelectionChanged="SplitView_SelectionChanged">
+            <PivotItem>
+                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <Grid Width="200" Height="200" Background="{ThemeResource CorNowBackground}" CornerRadius="100">
+                        <Image Source="/Assets/Start_dark/cloud_database.png" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                    <TextBlock Margin="0,20" 
+                       TextWrapping="Wrap" 
+                               Name="cloud_database"
+                       TextAlignment="Center"
+                       MaxWidth="300"
+                       Opacity="0.8"/>
+                </StackPanel>
+            </PivotItem>
+            <PivotItem>
+                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <Grid Width="200" Height="200" Background="{ThemeResource CorNowBackground}" CornerRadius="100">
+                        <Image Source="/Assets/Start_dark/backup_storage.png" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                    <TextBlock Margin="0,20" 
+                       TextWrapping="Wrap" 
+                        Name="backup_storage"
+                       TextAlignment="Center"
+                       MaxWidth="300"
+                       Opacity="0.8"/>
+                </StackPanel>
+            </PivotItem>
+            <PivotItem>
+                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <Grid Width="200" Height="200" Background="{ThemeResource CorNowBackground}" CornerRadius="100">
+                        <Image Source="/Assets/Start_dark/download_icon.png" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                    <TextBlock Margin="0,20" 
+                       TextWrapping="Wrap" 
+                               Name="download_icon"
+                       TextAlignment="Center"
+                       MaxWidth="300"
+                       Opacity="0.8"/>
+                </StackPanel>
+            </PivotItem>
+            <PivotItem>
+                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" >
+                    <Grid Width="200" Height="200" Background="{ThemeResource CorNowBackground}" CornerRadius="100">
+                        <Image Source="/Assets/Start_dark/scan_gerador.png" Width="100" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                    <TextBlock Margin="0,20" 
+                       TextWrapping="Wrap" 
+                              Name="scan_gerador"
+                       TextAlignment="Center"
+                       MaxWidth="300"
+                       Opacity="0.8"/>
+                </StackPanel>
+            </PivotItem>
+        </Pivot>
+
+
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center" Margin="15,0,15,30">
+
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,10,0,20" Orientation="Horizontal">
+                <Grid Tag="0" Name="point1" Margin="5,0" Width="12" Height="12" Background="{ThemeResource CorPrimaria}" CornerRadius="100"/>
+                <Grid Tag="1" Name="point2" Margin="5,0" Width="12" Height="12" Background="{ThemeResource CorSegundaria}" CornerRadius="100"/>
+                <Grid Tag="2" Name="point3" Margin="5,0" Width="12" Height="12" Background="{ThemeResource CorSegundaria}" CornerRadius="100"/>
+                <Grid Tag="3" Name="point4" Margin="5,0" Width="12" Height="12" Background="{ThemeResource CorSegundaria}" CornerRadius="100"/>
+            </StackPanel>
+
+            <Button Windows10version1809:CornerRadius="15" 
+                    Click="Button_Click_1"
+                    x:Uid="enter"
+                    Width="100"
+                    Height="32"
+                    Style="{StaticResource ButtonStyleWhite}"/>
+
+            <Button Windows10version1809:CornerRadius="15"
+                    Margin="0,10,0,0"
+                    x:Uid="register"
+                    Click="Button_Click"
+                    Width="100"
+                    Height="32"
+                    Style="{StaticResource ButtonStyleWhite}"/>
+
+            <Button Windows10version1809:CornerRadius="15"
+                    Margin="0,10,0,0"
+                    Click="BtnGoIt_Click" 
+                    Name="btnGoIt" 
+                    Width="100"
+                    Height="32"
+                    Style="{StaticResource ButtonStyle1}"/>
+
+        </StackPanel>
+
+    </Grid>
+
+</Page>

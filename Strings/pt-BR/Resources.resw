@@ -1,0 +1,1163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="backup_storage" xml:space="preserve">
+    <value>Gere backups locais e compartilhe com outros usuários ou com outros aparelhos que você possui incluindo a versão do app para PC, simples rápido e fácil.</value>
+  </data>
+  <data name="cloud_database" xml:space="preserve">
+    <value>Serviço de banco de dados em nuvem capaz de sincronizar todos seus históricos em tempo real em todos seus dispositivos conectados, sincronização instantânea gerou e digitalizou já iram aparecer nos históricos em todos aparelhos em qualquer lugar.</value>
+  </data>
+  <data name="DisplayName" xml:space="preserve">
+    <value>Perfect Scan</value>
+  </data>
+  <data name="download_icon" xml:space="preserve">
+    <value>Baixe qualquer coisa que quiser usando a câmera do aparelho você pode digitalizar links de downloads e o conteúdo será baixado e salvo em seu armazenamento local.</value>
+  </data>
+  <data name="enter.Content" xml:space="preserve">
+    <value>Entrar</value>
+  </data>
+  <data name="finalizar" xml:space="preserve">
+    <value>Finalizar</value>
+  </data>
+  <data name="proximo" xml:space="preserve">
+    <value>Próximo</value>
+  </data>
+  <data name="register.Content" xml:space="preserve">
+    <value>Registrar</value>
+  </data>
+  <data name="scan_gerador" xml:space="preserve">
+    <value>Com este app você será capaz de gerar e digitalizar códigos de barras usando a câmera e imagens armazenadas da galeria, com 12 tipos de códigos de barras suportados. Compartilhe apps, contatos, produtos, redes WI-FI e muito mais.</value>
+  </data>
+  <data name="ButtonClose" xml:space="preserve">
+    <value>Fechar</value>
+  </data>
+  <data name="idUser.PlaceholderText" xml:space="preserve">
+    <value>Entre com seu ID ou use o Qr Code</value>
+  </data>
+  <data name="resetKey.Content" xml:space="preserve">
+    <value>Esqueceu sua senha?</value>
+  </data>
+  <data name="ErroConexao" xml:space="preserve">
+    <value>Sem conexão com a internet!</value>
+  </data>
+  <data name="ErroDigiteId" xml:space="preserve">
+    <value>Digite seu ID</value>
+  </data>
+  <data name="ErroDigiteIdInvalid" xml:space="preserve">
+    <value>Seu ID esta incorreto!</value>
+  </data>
+  <data name="ErroDigiteKeyPass" xml:space="preserve">
+    <value>Digite sua chave de acesso!</value>
+  </data>
+  <data name="ErroKeyPass" xml:space="preserve">
+    <value>Seu chave de acesso esta incorreto!</value>
+  </data>
+  <data name="ErroUser" xml:space="preserve">
+    <value>Não conseguimos encontrar sua conta!</value>
+  </data>
+  <data name="Escanear.Content" xml:space="preserve">
+    <value>Escanear</value>
+  </data>
+  <data name="EscanearImagem.Content" xml:space="preserve">
+    <value>Escanear Imagem</value>
+  </data>
+  <data name="Gerar.Content" xml:space="preserve">
+    <value>Gerar Códigos</value>
+  </data>
+  <data name="Historicos.Content" xml:space="preserve">
+    <value>Históricos</value>
+  </data>
+  <data name="Inicio.Content" xml:space="preserve">
+    <value>Inicio</value>
+  </data>
+  <data name="assistente.Content" xml:space="preserve">
+    <value>Assistente pessoal</value>
+  </data>
+  <data name="beepScan.Header" xml:space="preserve">
+    <value>Apitar</value>
+  </data>
+  <data name="BuyOrDoar.Content" xml:space="preserve">
+    <value>Comprar ou Doar</value>
+  </data>
+  <data name="extras.Header" xml:space="preserve">
+    <value>Extras</value>
+  </data>
+  <data name="falarResultadoAoEscanear.Header" xml:space="preserve">
+    <value>Ler o resultado ao escanear</value>
+  </data>
+  <data name="falarResultadoAoEscanear.OffContent" xml:space="preserve">
+    <value>Ao finalizar um escaneamento sera lido automaticamente, exceto se o modo em massa tiver ativo</value>
+  </data>
+  <data name="falarResultadoAoEscanearMassa.Header" xml:space="preserve">
+    <value>Ler em modo em massa</value>
+  </data>
+  <data name="falarResultadoAoEscanearMassa.OffContent" xml:space="preserve">
+    <value>Ao escanear sera lido algo especifico do código</value>
+  </data>
+  <data name="formatoCodigo" xml:space="preserve">
+    <value>Formato do código</value>
+  </data>
+  <data name="laserColor" xml:space="preserve">
+    <value>Cor do laser</value>
+  </data>
+  <data name="laser_blue_bright" xml:space="preserve">
+    <value>Azul Brilhante</value>
+  </data>
+  <data name="laser_blue_dark" xml:space="preserve">
+    <value>Azul Escuro</value>
+  </data>
+  <data name="laser_blue_light" xml:space="preserve">
+    <value>Azul Claro</value>
+  </data>
+  <data name="laser_default" xml:space="preserve">
+    <value>Padrão</value>
+  </data>
+  <data name="laser_green_dark" xml:space="preserve">
+    <value>Verde Escuro</value>
+  </data>
+  <data name="laser_green_light" xml:space="preserve">
+    <value>Verde Claro</value>
+  </data>
+  <data name="laser_orange_dark" xml:space="preserve">
+    <value>Laranja Escuro</value>
+  </data>
+  <data name="laser_orange_light" xml:space="preserve">
+    <value>Laranja Claro</value>
+  </data>
+  <data name="laser_purple" xml:space="preserve">
+    <value>Roxo</value>
+  </data>
+  <data name="laser_red_dark" xml:space="preserve">
+    <value>Vermelho Escuro</value>
+  </data>
+  <data name="laser_red_light" xml:space="preserve">
+    <value>Vermelho Claro</value>
+  </data>
+  <data name="Nuvem.Content" xml:space="preserve">
+    <value>Nuvem</value>
+  </data>
+  <data name="resultado" xml:space="preserve">
+    <value>Resultado</value>
+  </data>
+  <data name="salvarEscaneados.Header" xml:space="preserve">
+    <value>Salva códigos escaneados</value>
+  </data>
+  <data name="salvarEscaneados.OffContent" xml:space="preserve">
+    <value>Todos os códigos escaneados serão salvos em históricos</value>
+  </data>
+  <data name="salvarGerados.Header" xml:space="preserve">
+    <value>Salva códigos gerados</value>
+  </data>
+  <data name="salvarGerados.OffContent" xml:space="preserve">
+    <value>Todos os códigos gerados serão salvos em históricos</value>
+  </data>
+  <data name="scanEmMassa.Header" xml:space="preserve">
+    <value>Modo em Massa</value>
+  </data>
+  <data name="scanEmMassa.OffContent" xml:space="preserve">
+    <value>Permite escanear sem para. Todos os resultados são salvos nos históricos sem pause</value>
+  </data>
+  <data name="scanInverso.Header" xml:space="preserve">
+    <value>Modo inverso</value>
+  </data>
+  <data name="scanInverso.OffContent" xml:space="preserve">
+    <value>Permite escanear códigos em fundo preto</value>
+  </data>
+  <data name="select" xml:space="preserve">
+    <value>Selecione</value>
+  </data>
+  <data name="Settings.Content" xml:space="preserve">
+    <value>Configurações</value>
+  </data>
+  <data name="tipoCodigo" xml:space="preserve">
+    <value>Tipo do código</value>
+  </data>
+  <data name="useAutoFocus.Header" xml:space="preserve">
+    <value>Foco automatico</value>
+  </data>
+  <data name="useFrontalCamAvainable.OffContent" xml:space="preserve">
+    <value>Usar câmera frontal se disponível como padrão</value>
+  </data>
+  <data name="vibrateScan.Header" xml:space="preserve">
+    <value>Vibrar</value>
+  </data>
+  <data name="useFrontalCamAvainable.Header" xml:space="preserve">
+    <value>Câmera frontal</value>
+  </data>
+  <data name="aguarde" xml:space="preserve">
+    <value>Aguarde...</value>
+  </data>
+  <data name="digitenome" xml:space="preserve">
+    <value>Digite seu nome!</value>
+  </data>
+  <data name="digitenomeValido" xml:space="preserve">
+    <value>Seu nome é invalido!</value>
+  </data>
+  <data name="email.PlaceholderText" xml:space="preserve">
+    <value>E-Mail</value>
+  </data>
+  <data name="ErroDigiteEmail" xml:space="preserve">
+    <value>Digite seu E-Mail!</value>
+  </data>
+  <data name="ErroDigiteIdInvalEmail" xml:space="preserve">
+    <value>O E-Mail digitado esta incorreto!</value>
+  </data>
+  <data name="ErroDigiteSenha" xml:space="preserve">
+    <value>Digite sua senha!</value>
+  </data>
+  <data name="ErroDigiteSenhaKey" xml:space="preserve">
+    <value>Crie uma chave de acesso!</value>
+  </data>
+  <data name="ErrorLogar" xml:space="preserve">
+    <value>Ocorreu um erro ao fazer login. Verifique suas informações e tente novamente!</value>
+  </data>
+  <data name="ErrorLogarReset" xml:space="preserve">
+    <value>Ocorreu um erro, verefique sua conexão ou entre com um E-Mail diferente</value>
+  </data>
+  <data name="ErrorRegister" xml:space="preserve">
+    <value>Verifique suas informações. Seu E-Mail ja existe ou a senha é muito curta!</value>
+  </data>
+  <data name="Recuperar.Content" xml:space="preserve">
+    <value>Recuperar</value>
+  </data>
+  <data name="recuperarRessume.Text" xml:space="preserve">
+    <value>Entre com seu E-Mail</value>
+  </data>
+  <data name="recuperarSenha.Text" xml:space="preserve">
+    <value>Recuperar senha</value>
+  </data>
+  <data name="senha.PlaceholderText" xml:space="preserve">
+    <value>Senha</value>
+  </data>
+  <data name="btnCancelar.Content" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="btnSair" xml:space="preserve">
+    <value>Sair</value>
+  </data>
+  <data name="certezaSair" xml:space="preserve">
+    <value>Tem certeza que deseja sair?</value>
+  </data>
+  <data name="ErroDigiteSenhaCurta" xml:space="preserve">
+    <value>Sua senha é muito curta!</value>
+  </data>
+  <data name="BtnSalvar.Content" xml:space="preserve">
+    <value>Salvar</value>
+  </data>
+  <data name="delete" xml:space="preserve">
+    <value>Apagar</value>
+  </data>
+  <data name="deleteAllSubtitleEscaneados" xml:space="preserve">
+    <value>Todos seus códigos escaneados serão apagados</value>
+  </data>
+  <data name="deleteAllSubtitleGerados" xml:space="preserve">
+    <value>Todos seus códigos gerados serão apagados</value>
+  </data>
+  <data name="deleteAllTitle" xml:space="preserve">
+    <value>Apagar seus Históricos?</value>
+  </data>
+  <data name="deleteHistorico.Text" xml:space="preserve">
+    <value>Apagar</value>
+  </data>
+  <data name="deletehistoricoSubtitle" xml:space="preserve">
+    <value>Tem certeza que deseja apagar?</value>
+  </data>
+  <data name="editTituloHistorico.Text" xml:space="preserve">
+    <value>Renomear</value>
+  </data>
+  <data name="enterName" xml:space="preserve">
+    <value>Entre com o nome!</value>
+  </data>
+  <data name="enterNameValid" xml:space="preserve">
+    <value>Entre com um nome valido!</value>
+  </data>
+  <data name="escaneados.Header" xml:space="preserve">
+    <value>Escaneados</value>
+  </data>
+  <data name="gerados.Header" xml:space="preserve">
+    <value>Gerados</value>
+  </data>
+  <data name="ic_action_android_app" xml:space="preserve">
+    <value>App Android</value>
+  </data>
+  <data name="ic_action_back" xml:space="preserve">
+    <value>Link</value>
+  </data>
+  <data name="ic_action_contact" xml:space="preserve">
+    <value>Contato</value>
+  </data>
+  <data name="ic_action_numero" xml:space="preserve">
+    <value>Número de celular</value>
+  </data>
+  <data name="ic_action_product&quot;" xml:space="preserve">
+    <value>Produto</value>
+  </data>
+  <data name="ic_action_sms" xml:space="preserve">
+    <value>SMS</value>
+  </data>
+  <data name="ic_action_texto" xml:space="preserve">
+    <value>Texto</value>
+  </data>
+  <data name="ic_action_whatsapp" xml:space="preserve">
+    <value>WhatsApp</value>
+  </data>
+  <data name="ic_action_wifi" xml:space="preserve">
+    <value>WI-FI</value>
+  </data>
+  <data name="ic_action_windows_app" xml:space="preserve">
+    <value>App Windows</value>
+  </data>
+  <data name="newNameCode.PlaceholderText" xml:space="preserve">
+    <value>Entre com o novo nome...</value>
+  </data>
+  <data name="notHistorico" xml:space="preserve">
+    <value>Não há históricos para apagar</value>
+  </data>
+  <data name="sortingCodigoTipo" xml:space="preserve">
+    <value>Tipo</value>
+  </data>
+  <data name="sortingData" xml:space="preserve">
+    <value>Mais novo</value>
+  </data>
+  <data name="sortingDataZA" xml:space="preserve">
+    <value>Mais antigo</value>
+  </data>
+  <data name="sortingFormato" xml:space="preserve">
+    <value>Formato de código</value>
+  </data>
+  <data name="sortingName" xml:space="preserve">
+    <value>Ordem alfabética A-Z</value>
+  </data>
+  <data name="sortingNameZA" xml:space="preserve">
+    <value>Ordem alfabética Z-A</value>
+  </data>
+  <data name="camNot.Text" xml:space="preserve">
+    <value>A câmera não foi encontrada</value>
+  </data>
+  <data name="canNotDesc.Text" xml:space="preserve">
+    <value>Verifique se a conexão e a instalação estão corretas, se não há um antivírus bloqueando o aplicativo e se os drivers estão atualizados.</value>
+  </data>
+  <data name="AZTEC" xml:space="preserve">
+    <value>Código AZTEC</value>
+  </data>
+  <data name="CODABAR" xml:space="preserve">
+    <value>Código de barras</value>
+  </data>
+  <data name="CODE_128" xml:space="preserve">
+    <value>Código 128</value>
+  </data>
+  <data name="CODE_39" xml:space="preserve">
+    <value>Código 39</value>
+  </data>
+  <data name="CODE_93" xml:space="preserve">
+    <value>Código 93</value>
+  </data>
+  <data name="EAN_13" xml:space="preserve">
+    <value>Código EAN 13</value>
+  </data>
+  <data name="EAN_8" xml:space="preserve">
+    <value>Código EAN 8</value>
+  </data>
+  <data name="ITF" xml:space="preserve">
+    <value>Código ITF</value>
+  </data>
+  <data name="PDF_417" xml:space="preserve">
+    <value>Código PDF 417</value>
+  </data>
+  <data name="QR_CODE" xml:space="preserve">
+    <value>Código Qr</value>
+  </data>
+  <data name="UPC_A" xml:space="preserve">
+    <value>Código UPC A</value>
+  </data>
+  <data name="UPC_E" xml:space="preserve">
+    <value>Código UPC E</value>
+  </data>
+  <data name="AlertError" xml:space="preserve">
+    <value>Falha ao digitalizar</value>
+  </data>
+  <data name="errorFileLoader" xml:space="preserve">
+    <value>Ocorreu um erro ao ler o arquivo</value>
+  </data>
+  <data name="MessageError" xml:space="preserve">
+    <value>Ocoreu uma falha desconhecida, verifique a qualidade da imagem ou selecione outra.</value>
+  </data>
+  <data name="settingsFor" xml:space="preserve">
+    <value>Configurações</value>
+  </data>
+  <data name="clickExit" xml:space="preserve">
+    <value>Clique novamente para sair!</value>
+  </data>
+  <data name="BackupLocal.Content" xml:space="preserve">
+    <value>Backup Local</value>
+  </data>
+  <data name="Buy.Content" xml:space="preserve">
+    <value>Comprar</value>
+  </data>
+  <data name="Doar.Content" xml:space="preserve">
+    <value>Doar</value>
+  </data>
+  <data name="Summary1Imagem.Text" xml:space="preserve">
+    <value>Selecione uma imagem da galeria</value>
+  </data>
+  <data name="Summary2Imagem.Text" xml:space="preserve">
+    <value>Capture uma nova imagem</value>
+  </data>
+  <data name="Summary3Imagem.Text" xml:space="preserve">
+    <value>Corta a imagem</value>
+  </data>
+  <data name="MessageErrorSupport" xml:space="preserve">
+    <value>Infelizmente ainda não temos suporte a esse código de barras</value>
+  </data>
+  <data name="salvo" xml:space="preserve">
+    <value>Salvo</value>
+  </data>
+  <data name="DefauldContent.Content" xml:space="preserve">
+    <value>Padrão</value>
+  </data>
+  <data name="LoadPapel" xml:space="preserve">
+    <value>Mudando o papel de parede. Aguarde...</value>
+  </data>
+  <data name="Papeldeparede.Text" xml:space="preserve">
+    <value>Papel de parede</value>
+  </data>
+  <data name="RateApp.Content" xml:space="preserve">
+    <value>Avaliar App</value>
+  </data>
+  <data name="Support.Content" xml:space="preserve">
+    <value>Contato</value>
+  </data>
+  <data name="trocaPapel.Content" xml:space="preserve">
+    <value>Troca Papel de Parede</value>
+  </data>
+  <data name="VersionMobile.Content" xml:space="preserve">
+    <value>Versão para Celular e Tablet</value>
+  </data>
+  <data name="InversoModeState" xml:space="preserve">
+    <value>Modo escaneamento inverso</value>
+  </data>
+  <data name="MassaModeState" xml:space="preserve">
+    <value>Modo escaneamento em massa</value>
+  </data>
+  <data name="off" xml:space="preserve">
+    <value>desativado</value>
+  </data>
+  <data name="on" xml:space="preserve">
+    <value>ativado</value>
+  </data>
+  <data name="DataWifi.Text" xml:space="preserve">
+    <value>Entre com os dados da rede</value>
+  </data>
+  <data name="DigiteAqui.PlaceholderText" xml:space="preserve">
+    <value>Digite aqui...</value>
+  </data>
+  <data name="FlyoutButtonFontFamily.Text" xml:space="preserve">
+    <value>Fontes</value>
+  </data>
+  <data name="FlyoutButtonFontSize.Text" xml:space="preserve">
+    <value>Tamanho da fonte</value>
+  </data>
+  <data name="Geral.Header" xml:space="preserve">
+    <value>Geral</value>
+  </data>
+  <data name="Nomedarede.PlaceholderText" xml:space="preserve">
+    <value>Nome da rede</value>
+  </data>
+  <data name="Segury.Text" xml:space="preserve">
+    <value>Segurança</value>
+  </data>
+  <data name="WIFI.Header" xml:space="preserve">
+    <value>WI-FI</value>
+  </data>
+  <data name="Contacts.Header" xml:space="preserve">
+    <value>Contatos</value>
+  </data>
+  <data name="enterNumber.Text" xml:space="preserve">
+    <value>Digite o seu número de celular</value>
+  </data>
+  <data name="numberDesc1.Text" xml:space="preserve">
+    <value>Digite o número</value>
+  </data>
+  <data name="numberDesc2.Text" xml:space="preserve">
+    <value>Buscar nos contatos</value>
+  </data>
+  <data name="numberSummary1.Text" xml:space="preserve">
+    <value>Entre com o número de celular desejado, basta entrar com o código do pais (opcional) depois digite o DDD e o numero de celular, caso seja um número fixo digite normalmente.</value>
+  </data>
+  <data name="numberSummary2.Text" xml:space="preserve">
+    <value>Se deseja escolher um número de um contato salvo, clique no botão de contato ao lado da caixa de texto e escolha o contato desejado.</value>
+  </data>
+  <data name="Numero.Header" xml:space="preserve">
+    <value>Número de celular</value>
+  </data>
+  <data name="perDesc1.Text" xml:space="preserve">
+    <value>Produto</value>
+  </data>
+  <data name="perDesc2.Text" xml:space="preserve">
+    <value>Encomenda</value>
+  </data>
+  <data name="perSummary1.Text" xml:space="preserve">
+    <value>Os códigos de barras UPC-A (Universal Product Code ou Código Universal de Produto) são usados no varejo, assim como o EAN-13, mas são mais utilizados no Canadá e nos Estados Unidos. Ele contém 11 dígitos de dados e um de verificação, portanto têm 12 dígitos</value>
+  </data>
+  <data name="perSummary2.Text" xml:space="preserve">
+    <value>Para gerar um código de encomenda você pode usar os códigos EAN-13, Código 39, 93, 128, pdf 417, código Qr ou ITF</value>
+  </data>
+  <data name="ProdutoeEncomenda.Header" xml:space="preserve">
+    <value>Produto ou Encomenda</value>
+  </data>
+  <data name="ProdutoEncomendaSummary.Text" xml:space="preserve">
+    <value>Entre com o código do produto ou da encomenda</value>
+  </data>
+  <data name="DATA_MATRIX" xml:space="preserve">
+    <value>Código Data Matrix</value>
+  </data>
+  <data name="produtoHeader.Header" xml:space="preserve">
+    <value>Produto</value>
+  </data>
+  <data name="ErrorGerarCodigo1" xml:space="preserve">
+    <value>Editor Limpo, digite algo para que possamos construir seu códgo</value>
+  </data>
+  <data name="ErrorGerarCodigo10" xml:space="preserve">
+    <value>O conteúdo solicitado contém um caractere não codificável</value>
+  </data>
+  <data name="ErrorGerarCodigo11" xml:space="preserve">
+    <value>Não é possível encontrar um arranjo de símbolos que corresponda à mensagem. Palavras de código de dados</value>
+  </data>
+  <data name="ErrorGerarCodigo12" xml:space="preserve">
+    <value>O conteúdo solicitado deve ter 12 (sem dígito de soma de verificação) ou 13 dígitos, mas obteve</value>
+  </data>
+  <data name="ErrorGerarCodigo13" xml:space="preserve">
+    <value>O conteúdo solicitado deve ter 7 (sem dígito de soma de verificação) ou 8 dígitos, mas obteve</value>
+  </data>
+  <data name="ErrorGerarCodigo14" xml:space="preserve">
+    <value>O conteúdo deve conter apenas dígitos, mas obteve</value>
+  </data>
+  <data name="ErrorGerarCodigo15" xml:space="preserve">
+    <value>O conteúdo solicitado deve ter 8 dígitos, mas foi obtido</value>
+  </data>
+  <data name="ErrorGerarCodigo16" xml:space="preserve">
+    <value>O erro encontrado é desconhecido.</value>
+  </data>
+  <data name="ErrorGerarCodigo2" xml:space="preserve">
+    <value>O índice estava fora dos limites da matriz.</value>
+  </data>
+  <data name="ErrorGerarCodigo3" xml:space="preserve">
+    <value>O conteúdo não passa na soma de verificação</value>
+  </data>
+  <data name="ErrorGerarCodigo4" xml:space="preserve">
+    <value>O comprimento da entrada deve ser uniforme</value>
+  </data>
+  <data name="ErrorGerarCodigo5" xml:space="preserve">
+    <value>Protetores de início e fim inválidos: não é possível codificar</value>
+  </data>
+  <data name="ErrorGerarCodigo6" xml:space="preserve">
+    <value>Não é possível codificar</value>
+  </data>
+  <data name="ErrorGerarCodigo7" xml:space="preserve">
+    <value>Caractere incorreto na entrada</value>
+  </data>
+  <data name="ErrorGerarCodigo8" xml:space="preserve">
+    <value>O tamanho do conteúdo deve ter entre 1 e 80 caracteres, mas é</value>
+  </data>
+  <data name="ErrorGerarCodigo9" xml:space="preserve">
+    <value>O conteúdo solicitado deve ter menos de 80 dígitos, mas obteve</value>
+  </data>
+  <data name="NoWifiAvailable" xml:space="preserve">
+    <value>Não há redes WI-FI disponiveis ao redor de você.</value>
+  </data>
+  <data name="NoWifiNoAccess" xml:space="preserve">
+    <value>Não temos acesso ao WI-FI</value>
+  </data>
+  <data name="Segura" xml:space="preserve">
+    <value>Segura</value>
+    <comment>S</comment>
+  </data>
+  <data name="GerarInWifi.Content" xml:space="preserve">
+    <value>Gerar Código da rede WI-FI</value>
+  </data>
+  <data name="NoWifiAvailableNotFunction" xml:space="preserve">
+    <value>Não conseguimos programar esta ação, tente novamente</value>
+  </data>
+  <data name="ScanWifi.Content" xml:space="preserve">
+    <value>Buscar por redes WI-FI</value>
+  </data>
+  <data name="ScanWifiAvalible.Text" xml:space="preserve">
+    <value>Redes WI-FI encontradas ao seu redor</value>
+  </data>
+  <data name="wifiKeyNot" xml:space="preserve">
+    <value>Entre com a senha da rede WI-FI</value>
+  </data>
+  <data name="wifiNameNot" xml:space="preserve">
+    <value>Entre com o nome da rede WI-FI</value>
+  </data>
+  <data name="loaderEnomendaContent" xml:space="preserve">
+    <value>Gerar código da encomenda</value>
+  </data>
+  <data name="loaderProdutoContent" xml:space="preserve">
+    <value>Gerar código do produto</value>
+  </data>
+  <data name="MessageErrorOpenScanGerar" xml:space="preserve">
+    <value>Verifique se a conexão e a instalação estão corretas, se não há um antivírus bloqueando o aplicativo e se os drivers estão atualizados.</value>
+  </data>
+  <data name="TitleErrorOpenScanGerar" xml:space="preserve">
+    <value>A câmera não foi encontrada</value>
+  </data>
+  <data name="DarkMode.Header" xml:space="preserve">
+    <value>Modo noturno</value>
+  </data>
+  <data name="LinksSettingsLaunch.Header" xml:space="preserve">
+    <value>Abrir links no navegador automaticamente</value>
+  </data>
+  <data name="LinksSettingsLaunch.OffContent" xml:space="preserve">
+    <value>Quando um link for escaneado sera redirecionado ao navegador</value>
+  </data>
+  <data name="Themes.Content" xml:space="preserve">
+    <value>Temas</value>
+  </data>
+  <data name="WifiLinksSettings.Content" xml:space="preserve">
+    <value>WI-FI + Links</value>
+  </data>
+  <data name="WifiSettingsLaunch.Header" xml:space="preserve">
+    <value>Conectar automaticamente na rede WIFI</value>
+  </data>
+  <data name="WifiSettingsLaunch.OffContent" xml:space="preserve">
+    <value>Ao escanear um código que contém uma rede WI-FI será feita uma conexão automatica na rede</value>
+  </data>
+  <data name="GerarNumero.Text" xml:space="preserve">
+    <value>Gerar código</value>
+  </data>
+  <data name="packageNotMax13" xml:space="preserve">
+    <value>Uma encomenda precisa conter 13 digitos</value>
+  </data>
+  <data name="numberFormatError" xml:space="preserve">
+    <value>O número de telefone so pode conter números, sem letras ou caracteres</value>
+  </data>
+  <data name="numberFormatErrorMax" xml:space="preserve">
+    <value>O número não pode conter mais de 16 digitos</value>
+  </data>
+  <data name="numberFormatErrorMin" xml:space="preserve">
+    <value>O número não pode conter menos de 8 digitos</value>
+  </data>
+  <data name="produtoFormatError" xml:space="preserve">
+    <value>O código de um produto só pode conter números</value>
+  </data>
+  <data name="produtoFormatErrorMax" xml:space="preserve">
+    <value>Um produto contem 8 ou 13 digitos</value>
+  </data>
+  <data name="encFormatErrorMax" xml:space="preserve">
+    <value>Uma encomenda precisa conter 13 digitos</value>
+  </data>
+  <data name="EncInfoLP00060609526813" xml:space="preserve">
+    <value>Código de rastreio utilizado na loja internacional AliExpress. Ele é composto sempre por 2 (duas) letras iniciais, que são sempre "LP", e vem seguido por uma sequência de 14 (quatorze) números.
+
+Este código NÃO é rastreado pelo correio brasileiro, pois faz parte da logística do AliExpress, porém o sistema Rastreador de Pacotes consegue rastrear desde o momento da postagem do produto. Este tipo de código de rastreio, ao chegar em determinados países, é transformado em um código rastreado pelo correio brasileiro, o sistema Rastreador de Pacotes consegue identificar essa mudança e continua o seu rastreamento, agrupando as informações capturadas pelas duas transportadoras.</value>
+  </data>
+  <data name="EncInfoNL14869665773829" xml:space="preserve">
+    <value>Código de rastreio utilizado em algumas lojas internacionais, como por exemplo: AliExpress, GearBest, BangGood. Ele é composto sempre por 2 (duas) letras iniciais, que são sempre "NL", e vem seguido por uma sequência de 14 (quatorze) números.
+
+Este código NÃO é rastreado pelo correio brasileiro, pois faz parte da logística de algumas lojas internacionais em conjunto com a Netherlands Post, porém o sistema Rastreador de Pacotes consegue rastrear desde o momento da postagem do produto. Este tipo de código de rastreio, ao chegar em determinados países, é transformado em um código rastreado pelo correio brasileiro, o sistema Rastreador de Pacotes consegue identificar essa mudança e continua o seu rastreamento, agrupando as informações capturadas pelas duas transportadoras.</value>
+  </data>
+  <data name="EncInforesumoLP00060609526813" xml:space="preserve">
+    <value>Código de rastreio utilizado na loja internacional AliExpress. Ele é composto sempre por 2 (duas) letras iniciais, que são sempre "LP", e vem seguido por uma sequência de 14 (quatorze) números.</value>
+  </data>
+  <data name="EncInforesumoNL14869665773829" xml:space="preserve">
+    <value>Código de rastreio utilizado em algumas lojas internacionais, como por exemplo: AliExpress, GearBest, BangGood. Ele é composto sempre por 2 (duas) letras iniciais, que são sempre "NL", e vem seguido por uma sequência de 14 (quatorze) números.</value>
+  </data>
+  <data name="EncInforesumoSW123456789BR" xml:space="preserve">
+    <value>Este é o código de rastreio que os brasileiros mais conhecem. Ele é composto sempre por 2 (duas) letras iniciais, seguido por uma sequência de 9 (nove) números e termina com mais 2 (duas) letras.</value>
+  </data>
+  <data name="EncInforesumoSY10994025345" xml:space="preserve">
+    <value>Código de rastreio utilizado em algumas lojas internacionais, como por exemplo: AliExpress, GearBest, BangGood. Ele é composto sempre por 2 (duas) letras iniciais, que são sempre "SY", e vem seguido por uma sequência de 11 (onze) números.</value>
+  </data>
+  <data name="EncInforesumoSYBAA11849265SYBAB21777027" xml:space="preserve">
+    <value>Código de rastreio utilizado em algumas lojas internacionais, como por exemplo: AliExpress, GearBest, BangGood. Ele é composto sempre por 5 (cinco) letras iniciais, que são "SYBAA" ou "SYBAB" (por enquanto só temos registro desses dois tipos), e vem seguido por uma sequência de 8 (oito) números.</value>
+  </data>
+  <data name="EncInforesumoYD197747595YW" xml:space="preserve">
+    <value>Código de rastreio utilizado em algumas lojas internacionais, como por exemplo: AliExpress, GearBest, BangGood. Ele é composto sempre por 2 (duas) letras iniciais, que são sempre "YD", seguido por uma sequência de 9 (nove) números e termina com 2 (duas) letras finais, que são sempre "YW".</value>
+  </data>
+  <data name="EncInforesumoYT1701990005858243" xml:space="preserve">
+    <value>Código de rastreio utilizado em algumas lojas internacionais, como por exemplo: AliExpress, GearBest, BangGood. Ele é composto sempre por 2 (duas) letras iniciais, que são sempre "YT", e vem seguido por uma sequência de  16 (dezesseis) números.</value>
+  </data>
+  <data name="EncInfoSW123456789BR" xml:space="preserve">
+    <value>Este é o código de rastreio que os brasileiros mais conhecem. Ele é composto sempre por 2 (duas) letras iniciais, seguido por uma sequência de 9 (nove) números e termina com mais 2 (duas) letras.
+
+Este tipo de código é rastreado em todo o território nacional e também em alguma parte do todo o território internacional. O sistema dos correios brasileiros consegue rastrear este código mesmo se o seu produto ainda estiver no exterior, por exemplo, na China.
+
+Boa parte das lojas internacionais utilizam este código de rastreio. As duas letras iniciais deste código indicam o tipo de frete utilizado, enquanto as duas letras finais indicam o país de origem, ou seja, indica o país onde o produto foi postado.</value>
+  </data>
+  <data name="EncInfoSY10994025345" xml:space="preserve">
+    <value>Código de rastreio utilizado em algumas lojas internacionais, como por exemplo: AliExpress, GearBest, BangGood. Ele é composto sempre por 2 (duas) letras iniciais, que são sempre "SY", e vem seguido por uma sequência de 11 (onze) números.
+
+Este código NÃO é rastreado pelo correio brasileiro, pois faz parte da logística de algumas lojas internacionais em conjunto com a SunYou, porém o sistema Rastreador de Pacotes consegue rastrear desde o momento da postagem do produto. Este tipo de código de rastreio, ao chegar em determinados países, é transformado em um código rastreado pelo correio brasileiro, o sistema Rastreador de Pacotes consegue identificar essa mudança e continua o seu rastreamento, agrupando as informações capturadas pelas duas transportadoras.</value>
+  </data>
+  <data name="EncInfoSYBAA11849265SYBAB21777027" xml:space="preserve">
+    <value>Código de rastreio utilizado em algumas lojas internacionais, como por exemplo: AliExpress, GearBest, BangGood. Ele é composto sempre por 5 (cinco) letras iniciais, que são "SYBAA" ou "SYBAB" (por enquanto só temos registro desses dois tipos), e vem seguido por uma sequência de 8 (oito) números.
+
+Este código NÃO é rastreado pelo correio brasileiro, pois faz parte da logística de algumas lojas internacionais em conjunto com a Pos Malaysia, porém o sistema Rastreador de Pacotes consegue rastrear desde o momento da postagem do produto. Este tipo de código de rastreio, ao chegar em determinados países, é transformado em um código rastreado pelo correio brasileiro, o sistema Rastreador de Pacotes consegue identificar essa mudança e continua o seu rastreamento, agrupando as informações capturadas pelas duas transportadoras.</value>
+  </data>
+  <data name="EncInfoYD197747595YW" xml:space="preserve">
+    <value>Código de rastreio utilizado em algumas lojas internacionais, como por exemplo: AliExpress, GearBest, BangGood. Ele é composto sempre por 2 (duas) letras iniciais, que são sempre "YD", seguido por uma sequência de 9 (nove) números e termina com 2 (duas) letras finais, que são sempre "YW".
+
+Este código NÃO é rastreado pelo correio brasileiro, pois faz parte da logística de algumas lojas internacionais em conjunto com a Yanwen, porém o sistema Rastreador de Pacotes consegue rastrear desde o momento da postagem do produto. Este tipo de código de rastreio, ao chegar em determinados países, é transformado em um código rastreado pelo correio brasileiro, o sistema Rastreador de Pacotes consegue identificar essa mudança e continua o seu rastreamento, agrupando as informações capturadas pelas duas transportadoras.</value>
+  </data>
+  <data name="EncInfoYT1701990005858243" xml:space="preserve">
+    <value>Código de rastreio utilizado em algumas lojas internacionais, como por exemplo: AliExpress, GearBest, BangGood. Ele é composto sempre por 2 (duas) letras iniciais, que são sempre "YT", e vem seguido por uma sequência de 16 (dezesseis) números.
+
+Este código NÃO é rastreado pelo correio brasileiro, pois faz parte da logística de algumas lojas internacionais em conjunto com a Yun Express, porém o sistema Rastreador de Pacotes consegue rastrear desde o momento da postagem do produto. Este tipo de código de rastreio, ao chegar em determinados países, é transformado em um código rastreado pelo correio brasileiro, o sistema Rastreador de Pacotes consegue identificar essa mudança e continua o seu rastreamento, agrupando as informações capturadas pelas duas transportadoras.</value>
+  </data>
+  <data name="MessageErrorEnc" xml:space="preserve">
+    <value>Uma encomenda dos Correios é formado com 4 letras maiúsculas e 9 números, na seguinte ordem.
+
+* Duas letras no inicio
+* 9 números
+* E no final 2 letras</value>
+  </data>
+  <data name="loadingContacts" xml:space="preserve">
+    <value>Carregando contatos...</value>
+  </data>
+  <data name="loadingContactsError" xml:space="preserve">
+    <value>Não foi encontrado nenhum contato.</value>
+  </data>
+  <data name="ClipboardError" xml:space="preserve">
+    <value>As caracteres não podem ser adicionadas ao editor</value>
+  </data>
+  <data name="buscarContato.Content" xml:space="preserve">
+    <value>Buscar contato</value>
+  </data>
+  <data name="CopyText" xml:space="preserve">
+    <value>Copiado!</value>
+  </data>
+  <data name="gerarCodeEditor.Content" xml:space="preserve">
+    <value>Gerar código</value>
+  </data>
+  <data name="CopyClipboardError" xml:space="preserve">
+    <value>Não há nada para copia!</value>
+  </data>
+  <data name="CropBtn.Content" xml:space="preserve">
+    <value>Corta</value>
+  </data>
+  <data name="backuInfoCreate.Text" xml:space="preserve">
+    <value>Crie um novo Backup</value>
+  </data>
+  <data name="backuInfoCreateDesc.Text" xml:space="preserve">
+    <value>Seu Backup sera salvo na pasta "Perfect Scan" em "Backups" na pasta "Imagens"</value>
+  </data>
+  <data name="Backups" xml:space="preserve">
+    <value>Backups</value>
+  </data>
+  <data name="backupsInfoDisponivel.Text" xml:space="preserve">
+    <value>Oque deseja adicionar em sua Backup?</value>
+  </data>
+  <data name="btnSalvarBackup.Content" xml:space="preserve">
+    <value>Salvar Backup</value>
+  </data>
+  <data name="buscandoBackups" xml:space="preserve">
+    <value>Buscando backups, aguarde...</value>
+  </data>
+  <data name="cancelar.Content" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="EscaneadosBackup.Content" xml:space="preserve">
+    <value>Escaneados</value>
+  </data>
+  <data name="GeradosBackup.Content" xml:space="preserve">
+    <value>Gerados</value>
+  </data>
+  <data name="NoBackups" xml:space="preserve">
+    <value>Não há backups disponíveis</value>
+  </data>
+  <data name="NoDescBackups" xml:space="preserve">
+    <value>Não encontro oque procura?
+
+Verifique se o arquivo que busca esta na pasta "Imagens &gt; Perfect Scan" ou em "Backups" na pasta "Perfect Scan" em imagens, se não tiver você pode mover para lá e tentar novamente</value>
+  </data>
+  <data name="PlaceholderTextBackupInfo.PlaceholderText" xml:space="preserve">
+    <value>Entre com o nome do seu Backup</value>
+  </data>
+  <data name="selectFazerBackup" xml:space="preserve">
+    <value>Criar um novo backup</value>
+  </data>
+  <data name="selectRestaurarBackup" xml:space="preserve">
+    <value>Restaurar backups</value>
+  </data>
+  <data name="backupFalha" xml:space="preserve">
+    <value>Falha ao fazer backup!</value>
+  </data>
+  <data name="backupSuccefuly" xml:space="preserve">
+    <value>Backup feito com sucesso!</value>
+  </data>
+  <data name="addExistente.Content" xml:space="preserve">
+    <value>Adicionar as existentes</value>
+  </data>
+  <data name="addReplace.Content" xml:space="preserve">
+    <value>Adicionar e deletar existentes</value>
+  </data>
+  <data name="apagando" xml:space="preserve">
+    <value>Apagando...</value>
+  </data>
+  <data name="Aparelho.Text" xml:space="preserve">
+    <value>Aparelho:</value>
+  </data>
+  <data name="CaminhodoBackup.Text" xml:space="preserve">
+    <value>Caminho do Backup</value>
+  </data>
+  <data name="DataBackup.Text" xml:space="preserve">
+    <value>Data:</value>
+  </data>
+  <data name="deleteAllSubtitleBackups" xml:space="preserve">
+    <value>Tem certeza que deseja apagar tudo?</value>
+  </data>
+  <data name="deleteFalha" xml:space="preserve">
+    <value>Falha ao tentar apagar Backup</value>
+  </data>
+  <data name="remoneFalha" xml:space="preserve">
+    <value>Falha ao tentar remonear Backup</value>
+  </data>
+  <data name="Shared.Text" xml:space="preserve">
+    <value>Compartilhar</value>
+  </data>
+  <data name="SistemaOpercional.Text" xml:space="preserve">
+    <value>Sistema Operacional:</value>
+  </data>
+  <data name="Versao.Text" xml:space="preserve">
+    <value>Versão:</value>
+  </data>
+  <data name="carregando" xml:space="preserve">
+    <value>Carregando...</value>
+  </data>
+  <data name="deleteBackupOk" xml:space="preserve">
+    <value>Backup apagado com sucesso!</value>
+  </data>
+  <data name="EscaneadosBackupCount.Text" xml:space="preserve">
+    <value>Escaneados:</value>
+  </data>
+  <data name="fileScanBackup" xml:space="preserve">
+    <value>Verificando arquivo...</value>
+  </data>
+  <data name="fileScanBackupError" xml:space="preserve">
+    <value>Falha ao ler arquivo</value>
+  </data>
+  <data name="GeradosBackupCount.Text" xml:space="preserve">
+    <value>Gerados:</value>
+  </data>
+  <data name="remoneBackupOk" xml:space="preserve">
+    <value>Backup remoneado com sucesso!</value>
+  </data>
+  <data name="VerificndoDadosBackup" xml:space="preserve">
+    <value>Verificando dados do Backup...</value>
+  </data>
+  <data name="VerificndoDadosBackupError" xml:space="preserve">
+    <value>Falha ao ler os dados do backup</value>
+  </data>
+  <data name="addBackupFalha" xml:space="preserve">
+    <value>Falha ao adicionar Backup!</value>
+  </data>
+  <data name="addBackupOk" xml:space="preserve">
+    <value>Backup adicionado com sucesso!</value>
+  </data>
+  <data name="LoadPapelError" xml:space="preserve">
+    <value>Falha ao adicionar papel de parede</value>
+  </data>
+  <data name="mensagemFeed" xml:space="preserve">
+    <value>Entre com sua opinião, duvida, ideias ou oque deseja.</value>
+  </data>
+  <data name="androidDesc.Text" xml:space="preserve">
+    <value>O Perfect Scan: Barcode é um aplicativo multiplataforma que esta disponível para Android e Windows 10, com as mesmas funções e serviços em ambos sistemas, baixe a aproveite ao máximo</value>
+  </data>
+  <data name="androidDownload.Content" xml:space="preserve">
+    <value>Baixar Perfect Scan para Android</value>
+  </data>
+  <data name="androidTiulo.Text" xml:space="preserve">
+    <value>Perfect Scan: Barcode</value>
+  </data>
+  <data name="premiumDesc.Text" xml:space="preserve">
+    <value>Com o design em acrílico o aplicativo possui funções como imprimir em 2D e 3D, decodificação de textos como frases, poemas e textões para capturar os texto e transformar em código QR, fontes personalizadas e muito mais, baixe e aproveite.</value>
+  </data>
+  <data name="premiumDownload.Content" xml:space="preserve">
+    <value>Baixar Perfect Scan Premium</value>
+  </data>
+  <data name="premiumTiulo.Text" xml:space="preserve">
+    <value>Perfect Scan: Premium para PC</value>
+  </data>
+  <data name="Sobre.Content" xml:space="preserve">
+    <value>Sobre</value>
+  </data>
+  <data name="cttrs.Text" xml:space="preserve">
+    <value>Contatos/Redes Sociais</value>
+  </data>
+  <data name="cttrsEmail.Content" xml:space="preserve">
+    <value>E-Mail</value>
+  </data>
+  <data name="cttrsTelefone.Content" xml:space="preserve">
+    <value>Telefone</value>
+  </data>
+  <data name="devDesc.Text" xml:space="preserve">
+    <value>Igor Dutra Sanches designer e fundador do Perfect Scan. Qualquer duvida e ideias para melhorar o app, por favor entre em contato ;)</value>
+  </data>
+  <data name="privacyUser.Content" xml:space="preserve">
+    <value>Politica de Privacidade e Termos de Uso</value>
+  </data>
+  <data name="version" xml:space="preserve">
+    <value>Versão</value>
+  </data>
+  <data name="SobreApp" xml:space="preserve">
+    <value>Informações sobre o app</value>
+  </data>
+  <data name="btnSinzdaNuvem.Content" xml:space="preserve">
+    <value>Sincronizar históricos da Nuvem</value>
+  </data>
+  <data name="btnSinzparaNuvem.Content" xml:space="preserve">
+    <value>Sincronizar históricos para Nuvem</value>
+  </data>
+  <data name="contaText.Text" xml:space="preserve">
+    <value>Conta (Ainda não disponivel)</value>
+  </data>
+  <data name="ButtonSincronizar" xml:space="preserve">
+    <value>Sincronizar agora</value>
+  </data>
+  <data name="errorConnect" xml:space="preserve">
+    <value>Sem conexão com a internet</value>
+  </data>
+  <data name="OnSincForCloud" xml:space="preserve">
+    <value>Todos seus históricos do aparelho irá para nuvem, todos os aparelhos conectados a sua conta também ira ver a mudança.</value>
+  </data>
+  <data name="OnSincToCloud" xml:space="preserve">
+    <value>Todos seus históricos da Nuvem sera salvo no aparelho, todos os aparelhos conectados a sua conta também ira ver a mudança.</value>
+  </data>
+  <data name="ButtonDeleteArmazemaneto" xml:space="preserve">
+    <value>Armazenamento</value>
+  </data>
+  <data name="ButtonDeleteNuvem" xml:space="preserve">
+    <value>Nuvem</value>
+  </data>
+  <data name="nuvemDeleted" xml:space="preserve">
+    <value>Nuvem limpa</value>
+  </data>
+  <data name="exit" xml:space="preserve">
+    <value>Sair do App</value>
+  </data>
+  <data name="exitSummary" xml:space="preserve">
+    <value>Depois de sair sera preciso logar de novo!</value>
+  </data>
+  <data name="sairBtn" xml:space="preserve">
+    <value>Sair</value>
+  </data>
+  <data name="contaEscaneadosNuvemSettings.Header" xml:space="preserve">
+    <value>Salvar os históricos escaneados na nuvem</value>
+  </data>
+  <data name="contaEscaneadosNuvemSettings.OffContent" xml:space="preserve">
+    <value>Todos seus códigos escaneados serão sincronizados em tempo real em todos os seus aparelhos conectados.</value>
+  </data>
+  <data name="contaFromGeradoNuvemSettings.Header" xml:space="preserve">
+    <value>Receber todos os históricos gerados da Nuvem</value>
+  </data>
+  <data name="contaFromGeradoNuvemSettings.OffContent" xml:space="preserve">
+    <value>Todos seus códigos gerados seram recuperados da Nuvem e mostrados na lista de históricos em tempo real</value>
+  </data>
+  <data name="contaGeradoNuvemSettings.Header" xml:space="preserve">
+    <value>Salvar os históricos gerados na nuvem</value>
+  </data>
+  <data name="contaGeradoNuvemSettings.OffContent" xml:space="preserve">
+    <value>Todos seus códigos gerados serão sincronizados em tempo real em todos os seus aparelhos conectados.</value>
+  </data>
+  <data name="contFromaEscaneadosNuvemSettings.Header" xml:space="preserve">
+    <value>Receber todos os históricos escaneados da Nuvem</value>
+  </data>
+  <data name="contFromaEscaneadosNuvemSettings.OffContent" xml:space="preserve">
+    <value>Todos seus códigos escaneados seram recuperados da Nuvem e mostrados na lista de históricos em tempo real</value>
+  </data>
+  <data name="syncFrom.Content" xml:space="preserve">
+    <value>Sincronizar da Nuvem</value>
+  </data>
+  <data name="syncTo.Content" xml:space="preserve">
+    <value>Sincronizar para Nuvem</value>
+  </data>
+  <data name="succesfulNuvem" xml:space="preserve">
+    <value>Históricos sincronizados com sucesso!</value>
+  </data>
+  <data name="ViewWifi.Text" xml:space="preserve">
+    <value>Rede WI-FI</value>
+  </data>
+  <data name="NomedaredeView.Text" xml:space="preserve">
+    <value>Nome da rede</value>
+  </data>
+  <data name="ConnectarWifi.Content" xml:space="preserve">
+    <value>Conectar a rede WI-FI</value>
+  </data>
+  <data name="salvarRede.Content" xml:space="preserve">
+    <value>Salvar rede</value>
+  </data>
+  <data name="errorAccessWIFI" xml:space="preserve">
+    <value>Sem acesso ao WI-FI</value>
+  </data>
+  <data name="fallDial" xml:space="preserve">
+    <value>Falha ao tentar abrir dialog</value>
+  </data>
+  <data name="fallsave" xml:space="preserve">
+    <value>Falha ao tentar salvar</value>
+  </data>
+  <data name="noLINHA" xml:space="preserve">
+    <value>Nenhuma linha encontrada para fazer a chamada</value>
+  </data>
+  <data name="redeConnected" xml:space="preserve">
+    <value>Conectado a</value>
+  </data>
+  <data name="redeFalhaConnected" xml:space="preserve">
+    <value>Falha ao conectar a</value>
+  </data>
+  <data name="redeNoAvailable" xml:space="preserve">
+    <value>Não há rede disponível</value>
+  </data>
+  <data name="redeSelecteNot" xml:space="preserve">
+    <value>Esta rede WI-FI não foi encontrada ao seu alcance, ou o WI-FI esta desligado!</value>
+  </data>
+  <data name="ViewNumero.Text" xml:space="preserve">
+    <value>Número de celular</value>
+  </data>
+  <data name="contaLimitNuvemSettings.Header" xml:space="preserve">
+    <value>Limitar números de downloads</value>
+  </data>
+  <data name="contaLimitNuvemSettings.OffContent" xml:space="preserve">
+    <value>A sincronização só ira acontecer quando os históricos estiver em amostra.</value>
+  </data>
+  <data name="syncLimit.Content" xml:space="preserve">
+    <value>Limitar trafego de dados</value>
+  </data>
+  <data name="contactTitle.Text" xml:space="preserve">
+    <value>Contato</value>
+  </data>
+  <data name="emailContent" xml:space="preserve">
+    <value>Abrir E-Mail</value>
+  </data>
+  <data name="linkContent" xml:space="preserve">
+    <value>Abrir Link</value>
+  </data>
+  <data name="mapContent" xml:space="preserve">
+    <value>Abrir Maps</value>
+  </data>
+  <data name="notaContent" xml:space="preserve">
+    <value>Abrir Nota</value>
+  </data>
+  <data name="textoerroloadercontact.Text" xml:space="preserve">
+    <value>Falha ao carregar informações do contato</value>
+  </data>
+  <data name="Aberta" xml:space="preserve">
+    <value>Aberta</value>
+  </data>
+</root>

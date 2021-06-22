@@ -1,0 +1,113 @@
+﻿<Page
+    x:Class="Perfect_Scan.Paginas.Visualizador.Visualizador"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Perfect_Scan.Paginas.Visualizador"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    Loaded="Page_Loaded"
+     xmlns:controle="using:Perfect_Scan.Controle.Visualizador"
+      xmlns:extensions="using:Microsoft.Toolkit.Uwp.UI.Extensions"
+    xmlns:animations="using:Microsoft.Toolkit.Uwp.UI.Animations"
+   xmlns:control="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    Background="{ThemeResource Background}"
+    xmlns:Windows10version1809="http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsApiContractPresent(Windows.Foundation.UniversalApiContract, 7)">
+
+    <Grid>
+
+        <ProgressRing VerticalAlignment="Center"
+                      HorizontalAlignment="Center"
+                      Height="60"
+                      Width="60"
+                      IsActive="{Binding IsProgress, Mode=OneWay}"/>
+
+        <Grid Visibility="{Binding GridViewLayout, Mode=OneWay}">
+            <Grid VerticalAlignment="Top" Margin="0,-42,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="1"
+                        Margin="10,0" 
+                        Orientation="Horizontal">
+                    <Button Height="32"
+                           Margin="10,0,0,0"
+                            BorderBrush="Gray"
+                            BorderThickness="1"
+                            Windows10version1809:CornerRadius="10"
+                            Content="Compartilhar ao publico"
+                            Foreground="Gray"/>
+                </StackPanel>
+            </Grid>
+            <Grid VerticalAlignment="Top" Background="{ThemeResource DialDisplay}"
+                      Height="300">
+                <control:ImageEx Source="/Assets/app.png"/>
+            </Grid>
+
+            <ScrollViewer VerticalScrollBarVisibility="Hidden" ViewChanged="Scroll_ViewChanged" Name="Scroll" Margin="0,0,0,0">
+                <StackPanel>
+                    <Grid Height="300"/>
+                    <StackPanel Visibility="Collapsed" Background="{ThemeResource Background}">
+                        <StackPanel Orientation="Horizontal" Height="48" HorizontalAlignment="Right">
+
+                            <Button Margin="10,0,0,0" Background="Transparent"
+                        BorderThickness="0"  
+                        Windows10version1809:CornerRadius="100" 
+                        Width="42"
+                        Height="42">
+                                <FontIcon Foreground="{ThemeResource ButtonToolbar}" Glyph="&#xE2AD;" />
+                            </Button>
+                            <Button Margin="10,0,0,0" Background="Transparent"
+                        BorderThickness="0"  
+                        Windows10version1809:CornerRadius="100" 
+                        Width="42"
+                        Height="42">
+                                <FontIcon Foreground="{ThemeResource ButtonToolbar}" Glyph="&#xE16F;" />
+                            </Button>
+                            <Button Margin="10,0,0,0" Background="Transparent"
+                        BorderThickness="0"  
+                        Windows10version1809:CornerRadius="100" 
+                        Width="42"
+                        Height="42">
+                                <FontIcon Foreground="{ThemeResource ButtonToolbar}" Glyph="&#xE72D;" />
+                                <Button.Flyout>
+                                    <MenuFlyout MenuFlyoutPresenterStyle="{ThemeResource MenuFlyoutMenuFlyoutPresenterStyle1}">
+                                        <MenuFlyoutItem Text="Compartilhar Imagem"/>
+                                        <MenuFlyoutSeparator/>
+                                        <MenuFlyoutItem Text="Compartilhar Texto"/>
+                                    </MenuFlyout>
+                                </Button.Flyout>
+                            </Button>
+                            <Button Height="32"
+                           Margin="10,0,0,0"
+                            BorderBrush="Gray"
+                            BorderThickness="1"
+                            Windows10version1809:CornerRadius="10"
+                            Content="Salvar como .PNG"
+                            Foreground="Gray"/>
+                            <Button Height="32"
+                            Margin="10,0,10,0"
+                            BorderBrush="Gray"
+                            BorderThickness="1"
+                            Windows10version1809:CornerRadius="10"
+                            Content="Salvar como .TXT"
+                            Foreground="Gray"/>
+                        </StackPanel>
+
+                        <ContentControl Name="ContoleUser" 
+                                        HorizontalContentAlignment="Stretch"
+                                        HorizontalAlignment="Stretch"/>
+
+                        <Grid Height="100"/>
+
+                    </StackPanel>
+                    <TextBlock
+                        VerticalAlignment="Top"
+                        TextWrapping="Wrap"
+                        Margin="20"
+                        Text="Em desenvolvimento... Igor Dutra Sanches (zap: +55 (98) 98576-6514)"
+                        Name="CodigoViewtext"/>
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+</Page>

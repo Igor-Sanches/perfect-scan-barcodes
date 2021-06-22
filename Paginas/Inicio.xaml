@@ -1,0 +1,211 @@
+﻿<Page    
+    x:Class="Perfect_Scan.Paginas.Inicio"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Perfect_Scan.Paginas"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"    
+       xmlns:extensions="using:Microsoft.Toolkit.Uwp.UI.Extensions" 
+    xmlns:animations="using:Microsoft.Toolkit.Uwp.UI.Animations"
+  Tapped="SheetDialog_Tapped"  
+      xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+    xmlns:behaviors="using:Microsoft.Toolkit.Uwp.UI.Animations.Behaviors"
+  Loaded="Page_Loaded"
+    xmlns:Windows10version1809="http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsApiContractPresent(Windows.Foundation.UniversalApiContract, 7)"
+           xmlns:MDX="using:Windows.UI.Xaml.Controls?IsApiContractPresent(Windows.Foundation.UniversalApiContract,5)">
+   <Grid>
+        <Grid>
+            <Grid.Background>
+                <ImageBrush  Opacity="0.6" ImageSource="{Binding Background, Mode=OneWay}"/>
+            </Grid.Background>
+            <interactivity:Interaction.Behaviors>
+                <behaviors:Blur x:Name="BlurBehavior"
+                        Value="3.04"
+                        Duration="3000"
+                        Delay="0"
+                        EasingType="Linear"
+                        EasingMode="EaseOut"
+                        AutomaticallyStart="True"/>
+            </interactivity:Interaction.Behaviors>
+        </Grid>
+        <Grid VerticalAlignment="Top" Margin="0,-42,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="1"
+                        Margin="10,0" 
+                        Orientation="Horizontal">
+                <Button Background="Transparent"
+                        BorderThickness="0"  
+                        Windows10version1809:CornerRadius="100" 
+                        Width="42"
+                        Height="42">
+                    <Button.Flyout>
+                        <MenuFlyout MenuFlyoutPresenterStyle="{StaticResource MenuFlyoutMenuFlyoutPresenterStyle1}" Placement="Left" >
+                            <MenuFlyoutItem Foreground="{ThemeResource Titulo}" Click="MenuFlyoutItem_Click" x:Uid="Papeldeparede"/>
+                        </MenuFlyout>
+                    </Button.Flyout>
+                    <FontIcon Glyph="&#xE9B9;" 
+                              Margin="3,0,0,0"
+                                  FontFamily="/Font/ps.ttf#Segoe MDL2 Assets"
+                               Foreground="{ThemeResource ButtonToolbar}"/>
+                </Button>
+            </StackPanel>
+        </Grid>
+       <ScrollViewer VerticalScrollBarVisibility="Hidden">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid Background="{ThemeResource CorLiveTilesDestaque}"/>
+                <StackPanel>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                        <Button CommandParameter="Escanear" Command="{Binding GetCommand}" BorderBrush="{ThemeResource CorLinha}" BorderThickness="1" HorizontalAlignment="Stretch" Height="100" Background="Transparent">
+                        <StackPanel Margin="10" HorizontalAlignment="Center">
+                                <FontIcon Glyph="&#xE960;" Margin="10,0,10,3" FontFamily="/Font/ps.ttf#Segoe MDL2 Assets" Foreground="{ThemeResource CorIconeLiveTilesDestaque}" HorizontalAlignment="Center"/>
+                                <ContentPresenter Foreground="{ThemeResource CorTextoLiveTilesDestaque}" x:Uid="Escanear" HorizontalContentAlignment="Center" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+                        <Button CommandParameter="EscanearImagem" Command="{Binding GetCommand}" BorderBrush="{ThemeResource CorLinha}" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Stretch" Height="100" Background="Transparent">
+                        <StackPanel Margin="10" HorizontalAlignment="Center">
+                                <FontIcon Glyph="&#xEB9F;" Margin="10,0,10,3" FontFamily="/Font/ps.ttf#Segoe MDL2 Assets" Foreground="{ThemeResource CorIconeLiveTilesDestaque}" HorizontalAlignment="Center"/>
+                                <ContentPresenter Foreground="{ThemeResource CorTextoLiveTilesDestaque}" x:Uid="EscanearImagem" HorizontalContentAlignment="Center" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+                </Grid>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                        <Button CommandParameter="Historicos" Command="{Binding GetCommand}" BorderBrush="{ThemeResource CorLinha}" BorderThickness="1" HorizontalAlignment="Stretch" Height="100" Background="Transparent">
+                        <StackPanel Margin="10" HorizontalAlignment="Center">
+                                <FontIcon Glyph="&#xE005;" Margin="10,0,10,3" FontFamily="/Font/ps.ttf#Segoe MDL2 Assets" Foreground="{ThemeResource CorIconeLiveTilesDestaque}" HorizontalAlignment="Center"/>
+                                <ContentPresenter Foreground="{ThemeResource CorTextoLiveTilesDestaque}" x:Uid="Historicos" HorizontalContentAlignment="Center" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+                        <Button CommandParameter="Gerar" Command="{Binding GetCommand}" BorderBrush="{ThemeResource CorLinha}" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Stretch" Height="100" Background="Transparent">
+                        <StackPanel Margin="10" HorizontalAlignment="Center">
+                                <FontIcon Glyph="&#xE104;" Margin="10,0,10,3" FontFamily="/Font/ps.ttf#Segoe MDL2 Assets" Foreground="{ThemeResource CorIconeLiveTilesDestaque}" HorizontalAlignment="Center"/>
+                                <ContentPresenter Foreground="{ThemeResource CorTextoLiveTilesDestaque}" x:Uid="Gerar" HorizontalContentAlignment="Center" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+                        <Button CommandParameter="Configuracoes" Command="{Binding GetCommand}" BorderBrush="{ThemeResource CorLinha}" BorderThickness="1" Grid.Column="2" HorizontalAlignment="Stretch" Height="100" Background="Transparent">
+                        <StackPanel Margin="10" HorizontalAlignment="Center">
+                                <FontIcon Glyph="&#xE115;" Margin="10,0,10,3" FontFamily="/Font/ps.ttf#Segoe MDL2 Assets" Foreground="{ThemeResource CorIconeLiveTilesDestaque}" HorizontalAlignment="Center"/>
+                                <ContentPresenter Foreground="{ThemeResource CorTextoLiveTilesDestaque}" x:Uid="Settings" HorizontalContentAlignment="Center" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+                </Grid>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/> 
+                        </Grid.ColumnDefinitions>
+                        <Button CommandParameter="Account" Command="{Binding GetCommand}" BorderBrush="{ThemeResource CorLinha}" BorderThickness="1" HorizontalAlignment="Stretch" Height="100" Background="Transparent">
+                            <StackPanel Margin="10" HorizontalAlignment="Center">
+                                <FontIcon Glyph="&#xE753;" Margin="10,0,10,3" FontFamily="/Font/ps.ttf#Segoe MDL2 Assets" Foreground="{ThemeResource CorIconeLiveTilesDestaque}" HorizontalAlignment="Center"/>
+                                <ContentPresenter Foreground="{ThemeResource CorTextoLiveTilesDestaque}" x:Uid="Nuvem" HorizontalContentAlignment="Center" HorizontalAlignment="Center"/>
+                            </StackPanel>
+                        </Button>
+                        <Button Visibility="Collapsed" BorderBrush="{ThemeResource CorLinha}" BorderThickness="1" HorizontalAlignment="Stretch" Height="100" Background="Transparent" Grid.Column="1">
+                            <StackPanel Margin="10" HorizontalAlignment="Center">
+                                <FontIcon Glyph="&#xE7BF;" Margin="10,0,10,3" FontFamily="/Font/ps.ttf#Segoe MDL2 Assets" Foreground="{ThemeResource CorIconeLiveTilesDestaque}" HorizontalAlignment="Center"/>
+                                <ContentPresenter Foreground="{ThemeResource CorTextoLiveTilesDestaque}" x:Uid="BuyOrDoar" HorizontalContentAlignment="Center" HorizontalAlignment="Center"/>
+                            </StackPanel>
+                        </Button>
+                        <Button CommandParameter="BackupLocal" Command="{Binding GetCommand}" BorderBrush="{ThemeResource CorLinha}" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Stretch" Height="100" Background="Transparent">
+                        <StackPanel Margin="10" HorizontalAlignment="Center">
+                                <FontIcon Glyph="&#xE002;" Margin="10,0,10,3" FontFamily="/Font/ps.ttf#Segoe MDL2 Assets" Foreground="{ThemeResource CorIconeLiveTilesDestaque}" HorizontalAlignment="Center"/>
+                                <ContentPresenter Foreground="{ThemeResource CorTextoLiveTilesDestaque}" x:Uid="BackupLocal" HorizontalContentAlignment="Center" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+                 </Grid>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.6*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                        <Button CommandParameter="RateApp" Command="{Binding GetCommand}" BorderBrush="{ThemeResource CorLinha}" BorderThickness="1" HorizontalAlignment="Stretch" Height="100" Background="Transparent">
+                        <StackPanel Margin="10" HorizontalAlignment="Center">
+                                <FontIcon Glyph="&#xE011;" Margin="10,0,10,3" FontFamily="/Font/ps.ttf#Segoe MDL2 Assets" Foreground="{ThemeResource CorIconeLiveTilesDestaque}" HorizontalAlignment="Center"/>
+                                <ContentPresenter Foreground="{ThemeResource CorTextoLiveTilesDestaque}" x:Uid="RateApp" HorizontalContentAlignment="Center" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+                        <Button CommandParameter="Support" Command="{Binding GetCommand}" BorderBrush="{ThemeResource CorLinha}" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Stretch" Height="100" Background="Transparent">
+                        <StackPanel Margin="10" HorizontalAlignment="Center">
+                                <FontIcon Glyph="&#xE014;" Margin="10,0,10,3" FontFamily="/Font/ps.ttf#Segoe MDL2 Assets" Foreground="{ThemeResource CorIconeLiveTilesDestaque}" HorizontalAlignment="Center"/>
+                                <ContentPresenter Foreground="{ThemeResource CorTextoLiveTilesDestaque}" x:Uid="Support" HorizontalContentAlignment="Center" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+                </Grid>
+                <Grid>
+                        <Button CommandParameter="VersionMobile" Command="{Binding GetCommand}" BorderBrush="{ThemeResource CorLinha}" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Stretch" Height="100" Background="{ThemeResource CorLiveTilesDestaque}">
+                        <StackPanel Margin="10" HorizontalAlignment="Center">
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                    <FontIcon FontSize="28" Glyph="&#xE019;" Margin="5,0,5,3" FontFamily="/Font/ps.ttf#Segoe MDL2 Assets" Foreground="{ThemeResource CorIconeLiveTilesDestaque}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    <FontIcon Glyph="&#xE1C9;" Margin="5,0,5,3" FontFamily="/Font/ps.ttf#Segoe MDL2 Assets" Foreground="{ThemeResource CorIconeLiveTilesDestaque}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                  </StackPanel>
+                                <ContentPresenter Foreground="{ThemeResource CorTextoLiveTilesDestaque}"  x:Uid="VersionMobile" HorizontalContentAlignment="Center" HorizontalAlignment="Center"/>  
+                        </StackPanel>
+                    </Button>
+                </Grid>
+            </StackPanel>
+            </Grid>
+        </ScrollViewer>
+
+        <Grid Visibility="{Binding SheetPanelVisible, Mode=OneWay}" Background="{ThemeResource CorProgressoRing}"
+              extensions:VisualExtensions.CenterPoint="50,50,0">
+
+            <animations:Implicit.ShowAnimations>
+                <animations:TranslationAnimation Duration="0:0:1" From="0, 200, 0" To="0" ></animations:TranslationAnimation>
+                <animations:OpacityAnimation Duration="0:0:1" From="1.0" To="1.0"></animations:OpacityAnimation>
+            </animations:Implicit.ShowAnimations>
+
+            <animations:Implicit.HideAnimations>
+                <animations:ScalarAnimation Target="Opacity" Duration="0:0:1" To="0.0"></animations:ScalarAnimation>
+                <animations:ScalarAnimation Target="Translation.Y" Duration="0:0:1" To="200">
+                    <animations:ScalarKeyFrame Key="0.1" Value="30"></animations:ScalarKeyFrame>
+                    <animations:ScalarKeyFrame Key="0.5" Value="0.0"></animations:ScalarKeyFrame>
+                </animations:ScalarAnimation>
+            </animations:Implicit.HideAnimations>
+
+            <animations:Implicit.Animations>
+                <animations:Vector3Animation Target="Offset"  Duration="0:0:1"></animations:Vector3Animation>
+                <animations:ScalarAnimation Target="RotationAngleInDegrees" ImplicitTarget="Offset"  Duration="0:0:1.2" From="0" To="0">
+                    <animations:ScalarKeyFrame Key="0.9" Value="80"></animations:ScalarKeyFrame>
+                </animations:ScalarAnimation>
+                <animations:Vector3Animation Target="Scale" Duration="0:0:1"></animations:Vector3Animation>
+            </animations:Implicit.Animations>
+
+
+            <StackPanel Padding="10" Margin="10,0,10,40" Background="{ThemeResource DialogoBackground}" CornerRadius="15" VerticalAlignment="Bottom" HorizontalAlignment="Center" Orientation="Horizontal">
+                <Grid Width="350" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Command="{Binding AddCommand}" BorderBrush="{ThemeResource CorLinha}" BorderThickness="1" HorizontalAlignment="Stretch" Height="100" Background="Transparent">
+                        <StackPanel Margin="10" HorizontalAlignment="Center">
+                            <FontIcon Foreground="{ThemeResource Icone}" Glyph="&#xE109;" Margin="10,0"/>
+                            <ContentPresenter Foreground="{ThemeResource Texto}" x:Uid="trocaPapel" HorizontalContentAlignment="Center" />
+                        </StackPanel>
+                    </Button>
+                    <Button Command="{Binding RestaurarCommand}" BorderBrush="{ThemeResource CorLinha}" BorderThickness="1" Grid.Column="1" HorizontalAlignment="Stretch" Height="100" Background="Transparent">
+                        <StackPanel Margin="10" HorizontalAlignment="Center">
+                            <FontIcon Foreground="{ThemeResource Icone}" Glyph="&#xE149;" Margin="10,0"/>
+                            <ContentPresenter Foreground="{ThemeResource Texto}" x:Uid="DefauldContent" HorizontalContentAlignment="Center" />
+                        </StackPanel>
+                    </Button>
+                </Grid>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>

@@ -1,0 +1,89 @@
+﻿<UserControl
+    x:Class="Perfect_Scan.Controle.Historicos.GeradosView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Perfect_Scan.Controle.Historicos"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+   xmlns:database="using:Perfect_Scan.Database.Sql"
+    xmlns:Windows10version1803="http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsApiContractPresent(Windows.Foundation.UniversalApiContract, 6)"
+    mc:Ignorable="d" 
+    Loaded="UserControl_Loaded">
+
+    <Grid>
+        <Grid Visibility="{Binding LayoutListavazia, Mode=OneWay}">
+            <Grid.Background>
+                <ImageBrush ImageSource="/Assets/list_clear.png"/>
+            </Grid.Background>
+        </Grid>
+        <ProgressRing IsActive="{Binding ProgressLayout, Mode=OneWay}" HorizontalAlignment="Center" Height="70" Width="70" Foreground="{ThemeResource CorPrimaria}"/>
+          <ScrollViewer Visibility="{Binding LayoutHistoricos, Mode=OneWay}">
+            <ItemsControl Margin="0,10,0,30" ItemsSource="{Binding Lista, Mode=OneWay}"> 
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate x:DataType="database:Gerados">
+                        <Button Name="ItemClicked" Click="ItemClicked_Click" Style="{ThemeResource ItemHistorico}" BorderThickness="0,0,0,1" BorderBrush="{ThemeResource CorLinha}" HorizontalContentAlignment="Left" HorizontalAlignment="Stretch">
+                            <Button.ContextFlyout>
+                                <MenuFlyout MenuFlyoutPresenterStyle="{StaticResource MenuFlyoutMenuFlyoutPresenterStyle1}">
+                                    <MenuFlyoutItem Click="MenuFlyoutItem_Click" Foreground="{ThemeResource Texto}" x:Uid="editTituloHistorico"/>
+                                    <MenuFlyoutItem Click="MenuFlyoutItem_Click_1" Foreground="{ThemeResource Texto}" x:Uid="deleteHistorico"/>
+                                </MenuFlyout>
+                            </Button.ContextFlyout>
+                            <Button.Content>
+                                <Grid Margin="0,5">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid VerticalAlignment="Center" Margin="0,0,20,0" Opacity="0.6" Width="42" Height="42" CornerRadius="100">
+                                        <FontIcon FontSize="28" FontFamily="/Font/ps.ttf#Segoe MDL2 Assets" Glyph="{Binding Icone}" Foreground="{ThemeResource Icone}"/>
+                                    </Grid>
+                                    <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                                        <TextBlock Text="{Binding DisplayName}" Style="{ThemeResource BaseTextBlockStyle}" Foreground="{ThemeResource Texto}"/>
+                                        <TextBlock Text="{Binding GetResumo}" Margin="0,0,15,0" Foreground="{ThemeResource HistoricoSubTexto}" Style="{ThemeResource BodyTextBlockStyle}" TextWrapping="NoWrap" MaxLines="5" TextTrimming="CharacterEllipsis"/>
+                                    </StackPanel>
+                                </Grid>
+                            </Button.Content>
+                        </Button>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+        <ContentDialog Name="DialogEdit">
+            <StackPanel>
+                <StackPanel  Orientation="Horizontal" HorizontalAlignment="Center">
+
+                    <TextBox 
+                        Style="{ThemeResource TextBoxStyle}"
+                           Tag="&#xE104;"
+                        Name="EditName"
+                                 InputScope="PersonalFullName"
+                           Text="{Binding Remonear, Mode=OneWay}"
+                             MaxLength="50"
+                        Foreground="{ThemeResource Titulo}"
+                             x:Uid="newNameCode"
+                         Width="270" />
+                </StackPanel>
+                <TextBlock Text="{Binding RemonearError, Mode=OneWay}"
+                        Foreground="Red"  
+                       FontSize="12"/>
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,-30">
+                    <Button Command="{Binding CancelarEditarTituloCommand}"
+                          VerticalAlignment="Center"  
+                    x:Uid="btnCancelar"
+                            Style="{ThemeResource ButtonStyleContent}"
+                    Width="100"
+                     Height="32" 
+                            Foreground="Red" />
+                    <Button 
+                            VerticalAlignment="Center"  
+                      Width="100"
+                        Command="{Binding SalvarEditarTituloCommand}"
+                    Height="32" 
+                    Style="{StaticResource ButtonStyle1}" 
+                    x:Uid="BtnSalvar" />
+                </StackPanel>
+            </StackPanel>
+        </ContentDialog>
+    </Grid>
+</UserControl>

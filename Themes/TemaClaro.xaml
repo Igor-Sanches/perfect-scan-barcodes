@@ -1,0 +1,39 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Perfect_Scan.Themes">
+
+    <Color x:Key="ColorPrimary">#ddddee</Color>
+    <Color x:Key="ColorPrimaryDark">#FFE8EBEC</Color>
+    <Color x:Key="ColorTabSelected">#DDC8C8DA</Color>
+    <Color x:Key="ColorAccent">#01898B</Color>
+    <Color x:Key="ColorAccentBtnPressedSelected">#FF156468</Color>
+    <Color x:Key="ColorPrimaryAccent">#222244</Color>
+    <Color x:Key="ColorSpinnerDisable">#2C222244</Color>
+    <Color x:Key="Light_grey_100">#eef1f3</Color>
+    <Color x:Key="ColorText">#01898B</Color>
+    <Color x:Key="ColorTextHint">#424278</Color>
+    <Color x:Key="SortingSelected">#910B1F</Color>
+    <Color x:Key="Light_grey">#E8EBEC</Color>
+    <Color x:Key="White">#ffffffff</Color>
+    <Color x:Key="Dark_grey">#EEF1F3</Color>
+    <Color x:Key="BlackGrey">#FF0F0F0F</Color>
+
+    <SolidColorBrush x:Key="SoiidColorBlue" Color="#FF1D6EB2"/>
+    <SolidColorBrush x:Key="SolidColorPrimary" Color="{ThemeResource ColorPrimary}"/>
+    <SolidColorBrush x:Key="SolidColorPrimaryDark" Color="{ThemeResource ColorPrimaryDark}"/>
+    <SolidColorBrush x:Key="SolidColorTabSelected" Color="{ThemeResource ColorTabSelected}"/>
+    <SolidColorBrush x:Key="SolidColorAccent" Color="{ThemeResource ColorAccent}"/>
+    <SolidColorBrush x:Key="SolidColorAccentBtnPressedSelected" Color="{ThemeResource ColorAccentBtnPressedSelected}"/>
+    <SolidColorBrush x:Key="SolidColorPrimaryAccent" Color="{ThemeResource ColorPrimaryAccent}"/>
+    <SolidColorBrush x:Key="SolidColorSpinnerDisable" Color="{ThemeResource ColorSpinnerDisable}"/>
+    <SolidColorBrush x:Key="SolidLight_grey_100" Color="{ThemeResource Light_grey_100}"/>
+    <SolidColorBrush x:Key="SolidColorText" Color="{ThemeResource ColorText}"/>
+    <SolidColorBrush x:Key="SolidColorTextHint" Color="{ThemeResource ColorTextHint}"/>
+    <SolidColorBrush x:Key="SolidLight_grey" Color="{ThemeResource Light_grey}"/>
+    <SolidColorBrush x:Key="SolidWhite" Color="{ThemeResource White}"/>
+    <SolidColorBrush x:Key="SolidBlackGrey" Color="{ThemeResource BlackGrey}"/>
+    <SolidColorBrush x:Key="SolidDark_grey" Color="{ThemeResource Dark_grey}"/>
+
+
+</ResourceDictionary>

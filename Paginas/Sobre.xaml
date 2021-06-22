@@ -1,0 +1,94 @@
+﻿<Page
+    x:Class="Perfect_Scan.Paginas.Sobre"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Perfect_Scan.Paginas"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+       xmlns:control="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    xmlns:Windows10version1809="http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsApiContractPresent(Windows.Foundation.UniversalApiContract, 7)">
+
+    <Grid>
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <Grid Margin="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <control:DropShadowPanel BlurRadius="4.0" ShadowOpacity="0.70"  
+                          OffsetX="5.0" OffsetY="4.0" Color="Black">
+                    <Grid MinWidth="450" VerticalAlignment="Top" Background="{ThemeResource SubBackground}" BorderThickness="1" Margin="20">
+                        <StackPanel Margin="10,0,10,6">
+                            <StackPanel VerticalAlignment="Center" Orientation="Horizontal">
+                                <FontIcon Foreground="{ThemeResource Icone}" Glyph="&#xE8E5;" Margin="10,0" FontFamily="/Font/ps.ttf#Segoe MDL2 Assets" FontSize="50"/>
+                                <StackPanel>
+                                    <TextBlock Text="{Binding NameApp, Mode=OneWay}" Margin="0,30,0,0" Style="{ThemeResource BaseTextBlockStyle}" Foreground="{ThemeResource Texto}"/>
+                                    <TextBlock Text="{Binding DeveloperName, Mode=OneWay}" Margin="0,10" Foreground="{ThemeResource HistoricoSubTexto}" Style="{ThemeResource BodyTextBlockStyle}" />
+
+                                </StackPanel>
+                            </StackPanel>
+                            <MenuFlyoutSeparator/>
+                            <TextBlock Text="{Binding Version, Mode=OneWay}" Margin="0,10" Foreground="{ThemeResource HistoricoSubTexto}" Style="{ThemeResource BodyTextBlockStyle}" />
+
+                           
+                            <StackPanel Orientation="Horizontal">
+                                <Button Command="{Binding BtnBar}" CommandParameter="0" BorderThickness="0" Height="48" Width="100" Windows10version1809:CornerRadius="20">
+                                    <StackPanel>
+                                        <FontIcon Glyph="&#xE7BF;" Margin="10,0,10,3" FontFamily="/Font/ps.ttf#Segoe MDL2 Assets" Foreground="{ThemeResource CorIconeLiveTilesDestaque}" HorizontalAlignment="Center"/>
+                                    </StackPanel>
+                                </Button>
+                                <Button Command="{Binding BtnBar}" CommandParameter="1" Visibility="Collapsed" Margin="5,0,0,0" BorderThickness="0" Height="48" Width="100" Windows10version1809:CornerRadius="20">
+                                    <StackPanel>
+                                        <FontIcon Glyph="&#xE753;" Margin="10,0,10,3" FontFamily="/Font/ps.ttf#Segoe MDL2 Assets" Foreground="{ThemeResource CorIconeLiveTilesDestaque}" HorizontalAlignment="Center"/>
+                                    </StackPanel>
+                                </Button>
+                                <Button Command="{Binding BtnBar}" CommandParameter="RateApp" Margin="5,0,0,0" BorderThickness="0" Height="48" Width="100" Windows10version1809:CornerRadius="20">
+                                    <StackPanel>
+                                        <FontIcon Glyph="&#xE011;" Margin="10,0,10,3" FontFamily="/Font/ps.ttf#Segoe MDL2 Assets" Foreground="{ThemeResource CorIconeLiveTilesDestaque}" HorizontalAlignment="Center"/>
+                                    </StackPanel>
+                                </Button>
+                                <Button Command="{Binding BtnBar}" CommandParameter="Support" Margin="5,0,0,0" BorderThickness="0" Height="48" Width="100" Windows10version1809:CornerRadius="20">
+                                    <StackPanel>
+                                        <FontIcon Glyph="&#xE014;" Margin="10,0,10,3" FontFamily="/Font/ps.ttf#Segoe MDL2 Assets" Foreground="{ThemeResource CorIconeLiveTilesDestaque}" HorizontalAlignment="Center"/>
+                                    </StackPanel>
+                                </Button>
+                                <Button Command="{Binding BtnBar}" CommandParameter="BackupLocal" Margin="5,0,0,0" BorderThickness="0" Height="48" Width="100" Windows10version1809:CornerRadius="20">
+                                   <StackPanel>
+                                        <FontIcon Glyph="&#xE002;" Margin="10,0,10,3" FontFamily="/Font/ps.ttf#Segoe MDL2 Assets" Foreground="{ThemeResource CorIconeLiveTilesDestaque}" HorizontalAlignment="Center"/>
+                                    </StackPanel>
+                                </Button>
+                            </StackPanel> 
+                         
+                            <TextBlock x:Uid="cttrs"  Margin="0,30,0,0" Style="{ThemeResource BaseTextBlockStyle}" Foreground="{ThemeResource Texto}"/>
+                            <Button Command="{Binding BtnContato}" CommandParameter="0" Content="WhatsApp" Style="{ThemeResource ButtonStyleContent}"/>
+                            <Button Command="{Binding BtnContato}" CommandParameter="1" x:Uid="cttrsTelefone" Style="{ThemeResource ButtonStyleContent}"/>
+                            <Button Command="{Binding BtnBar}" CommandParameter="RateApp" x:Uid="cttrsEmail" Style="{ThemeResource ButtonStyleContent}"/>
+                            <Button Command="{Binding BtnContato}" CommandParameter="2" Content="Facebook" Style="{ThemeResource ButtonStyleContent}"/>
+                            <Button Command="{Binding BtnContato}" CommandParameter="3" Content="Instagram" Style="{ThemeResource ButtonStyleContent}"/>
+                            <Button Command="{Binding BtnContato}" CommandParameter="4" Content="Twitter" Style="{ThemeResource ButtonStyleContent}"/>
+                            <HyperlinkButton x:Uid="privacyUser"
+                                             Command="{Binding BtnPrivacy}"
+                                             Margin="10,5,0,10"
+                                             Foreground="{ThemeResource CorPrimaria}" />
+
+                            <Grid Padding="16" Margin="10" CornerRadius="10" Background="{ThemeResource SobrBackground}">
+                                <TextBlock  
+                                    TextAlignment="Center"
+                                    VerticalAlignment="Center" 
+                                      HorizontalAlignment="Center" 
+                                x:Uid="devDesc" Foreground="{ThemeResource Titulo}" Style="{ThemeResource BodyTextBlockStyle}" />
+                            </Grid>
+
+                            <TextBlock 
+                                HorizontalAlignment="Center"
+                                Margin="0,30,0,0" 
+                                Text="Perfect Scan @ 2017-2020" Foreground="{ThemeResource Titulo}" Style="{ThemeResource BodyTextBlockStyle}" />
+                        </StackPanel>
+                    </Grid>
+                </control:DropShadowPanel>
+            </Grid>
+
+        </ScrollViewer>
+    </Grid>
+
+</Page>

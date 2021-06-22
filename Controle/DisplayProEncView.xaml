@@ -1,0 +1,207 @@
+﻿<UserControl
+    x:Class="Perfect_Scan.Controle.DisplayProEncView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Perfect_Scan.Controle.Encomenda"
+    xmlns:local2="using:Perfect_Scan.Controle.Produto"
+    Loaded="UserControl_Loaded"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" >
+
+    <Grid Background="{StaticResource DialDisplay}">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" >
+
+            <Grid Style="{StaticResource DigitViewGridStyle}">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <ScrollViewer x:Name="dialerNumberControlScrollviewer"
+                              Grid.Column="0"
+                              Style="{StaticResource DigitViewScrollerStyle}">
+                    <StackPanel>
+                        <StackPanel Visibility="{Binding ProdutoVisibility, Mode=OneWay}">
+                            <RichTextBlock Foreground="{ThemeResource Texto}" IsTextSelectionEnabled="True" SelectionHighlightColor="{ThemeResource CorPrimaria}" Margin="10,0" SizeChanged="NumberToDial_SizeChanged">
+                                <Paragraph TextAlignment="Center">
+                                    <Run  
+                                    FontSize="30"
+                                    Text="{Binding DigiteProduto, Mode=OneWay}"/>
+                                </Paragraph>
+                            </RichTextBlock>
+                        </StackPanel>
+                        <StackPanel Visibility="{Binding EncomendaVisibility, Mode=OneWay}" Orientation="Horizontal">
+                        <RichTextBlock Visibility="{Binding DialerEncomendaCorreiosVisibility, Mode=OneWay}" Foreground="{ThemeResource Texto}" IsTextSelectionEnabled="True" SelectionHighlightColor="{ThemeResource CorPrimaria}" Margin="10,0" SizeChanged="NumberToDial_SizeChanged">
+                            <Paragraph TextAlignment="Center">
+                                <Run  
+                                    FontSize="30"
+                                    Text="{Binding DialerEncomendaCorreios, Mode=OneWay}"/>
+                            </Paragraph>
+                        </RichTextBlock>
+                        <RichTextBlock Visibility="{Binding DialerEncomendaLBVisibility, Mode=OneWay}" Foreground="{ThemeResource Texto}" IsTextSelectionEnabled="True" SelectionHighlightColor="{ThemeResource CorPrimaria}" Margin="10,0" SizeChanged="NumberToDial_SizeChanged">
+                            <Paragraph TextAlignment="Center">
+                                <Run 
+                                    FontSize="30" 
+                                    Foreground="{ThemeResource Titulo}"
+                                    Text="LB"/>
+                                <Run  
+                                    FontSize="30"
+                                    Text="{Binding DialerEncomendaLB, Mode=OneWay}"/>
+                            </Paragraph>
+                        </RichTextBlock>
+                        <RichTextBlock Visibility="{Binding DialerEncomendaYTVisibility, Mode=OneWay}" Foreground="{ThemeResource Texto}" IsTextSelectionEnabled="True" SelectionHighlightColor="{ThemeResource CorPrimaria}" Margin="10,0" SizeChanged="NumberToDial_SizeChanged">
+                            <Paragraph TextAlignment="Center">
+                                <Run 
+                                    FontSize="30" 
+                                    Foreground="{ThemeResource Titulo}"
+                                   Text="YT"/>
+                                <Run  
+                                    FontSize="30"
+                                    Text="{Binding DialerEncomendaYT, Mode=OneWay}"/>
+                            </Paragraph>
+                        </RichTextBlock>
+                        <RichTextBlock Visibility="{Binding DialerEncomendaYDYWVisibility, Mode=OneWay}" Foreground="{ThemeResource Texto}" IsTextSelectionEnabled="True" SelectionHighlightColor="{ThemeResource CorPrimaria}" Margin="10,0" SizeChanged="NumberToDial_SizeChanged">
+                            <Paragraph TextAlignment="Center">
+                                <Run 
+                                    FontSize="30" 
+                                    Foreground="{ThemeResource Titulo}"
+                                   Text="YD"/>
+                                <Run  
+                                    FontSize="30"
+                                    Text="{Binding DialerEncomendaYDYW, Mode=OneWay}"/>
+                                <Run 
+                                    FontSize="30" 
+                                    Foreground="{ThemeResource Titulo}"
+                                   Text="YW"/>
+                            </Paragraph>
+                        </RichTextBlock>
+                        <RichTextBlock Visibility="{Binding DialerEncomendaSYBAAVisibility, Mode=OneWay}" Foreground="{ThemeResource Texto}" IsTextSelectionEnabled="True" SelectionHighlightColor="{ThemeResource CorPrimaria}" Margin="10,0" SizeChanged="NumberToDial_SizeChanged">
+                            <Paragraph TextAlignment="Center">
+                                <Run 
+                                    FontSize="30" 
+                                    Foreground="{ThemeResource Titulo}"
+                                   Text="SYBAA"/>
+                                <Run  
+                                    FontSize="30"
+                                    Text="{Binding DialerEncomendaSYBAA, Mode=OneWay}"/>
+                            </Paragraph>
+                        </RichTextBlock>
+                        <RichTextBlock Visibility="{Binding DialerEncomendaSYBABVisibility, Mode=OneWay}" Foreground="{ThemeResource Texto}" IsTextSelectionEnabled="True" SelectionHighlightColor="{ThemeResource CorPrimaria}" Margin="10,0" SizeChanged="NumberToDial_SizeChanged">
+                            <Paragraph TextAlignment="Center">
+                                <Run 
+                                    FontSize="30" 
+                                    Foreground="{ThemeResource Titulo}"
+                                   Text="SYBAB"/>
+                                <Run  
+                                    FontSize="30"
+                                    Text="{Binding DialerEncomendaSYBAB, Mode=OneWay}"/>
+                            </Paragraph>
+                        </RichTextBlock>
+                        <RichTextBlock Visibility="{Binding DialerEncomendaNLVisibility, Mode=OneWay}" Foreground="{ThemeResource Texto}" IsTextSelectionEnabled="True" SelectionHighlightColor="{ThemeResource CorPrimaria}" Margin="10,0" SizeChanged="NumberToDial_SizeChanged">
+                            <Paragraph TextAlignment="Center">
+                                <Run 
+                                    FontSize="30" 
+                                    Foreground="{ThemeResource Titulo}"
+                                   Text="NL"/>
+                                <Run  
+                                    FontSize="30"
+                                    Text="{Binding DialerEncomendaNL, Mode=OneWay}"/>
+                            </Paragraph>
+                        </RichTextBlock>
+                        <RichTextBlock Visibility="{Binding DialerEncomendaSYVisibility, Mode=OneWay}" Foreground="{ThemeResource Texto}" IsTextSelectionEnabled="True" SelectionHighlightColor="{ThemeResource CorPrimaria}" Margin="10,0" SizeChanged="NumberToDial_SizeChanged">
+                            <Paragraph TextAlignment="Center">
+                                <Run 
+                                    FontSize="30" 
+                                    Foreground="{ThemeResource Titulo}"
+                                   Text="SY"/>
+                                <Run  
+                                    FontSize="30"
+                                    Text="{Binding DialerEncomendaSY, Mode=OneWay}"/>
+                            </Paragraph>
+                        </RichTextBlock>
+                    </StackPanel>
+
+                    </StackPanel>
+                </ScrollViewer>
+
+                <Button Grid.Column="1"   Background="Transparent"
+                           Margin="10,0" 
+                        Command="{Binding ProcessCopyCommand}"
+                        Visibility="{Binding CopyFunctionVisible, Mode=OneWay}"
+                        Style="{ThemeResource ButtonRevealStyle}" Width="48" Height="48">
+
+                    <TextBlock Foreground="{ThemeResource CorTextoDial}" FontFamily="Segoe MDL2 Assets" Text="&#xE8C8;" Style="{StaticResource DialpadNumberStyle}"/>
+                </Button>
+            </Grid>
+        </StackPanel>
+
+        <StackPanel Grid.RowSpan="2"
+                    VerticalAlignment="Bottom">
+            <Grid HorizontalAlignment="Stretch">
+                <StackPanel Orientation="Horizontal" Margin="5,10,0,0" Height="42">
+                    <ToggleSwitch Name="ProdutoView"  Toggled="ToggleSwitch_Toggled" VerticalAlignment="Center" IsOn="{Binding ToggleButtonOnChecked, Mode=OneWay}" OffContent="" x:Uid="produtoHeader" Style="{StaticResource ToggleSwitchStyle1}"  />
+                    <StackPanel VerticalAlignment="Center" Visibility="{Binding EncomendaVisibility, Mode=OneWay}" Orientation="Horizontal">
+                        <ComboBox SelectedIndex="{Binding GetIndex}" MaxWidth="210" Name="EncTypes" SelectionChanged="EncTypes_SelectionChanged"  Style="{StaticResource ComboBoxStyle1}" Background="Transparent" BorderThickness="0">
+                            <ComboBoxItem Content="SW123456789BR" Tag="SW123456789BR"/>
+                            <ComboBoxItem Content="LP00060609526813" Tag="LP00060609526813"/>
+                            <ComboBoxItem Content="YT1701990005858243" Tag="YT1701990005858243"/>
+                            <ComboBoxItem Content="YD197747595YW" Tag="YD197747595YW"/>
+                            <ComboBoxItem Content="SYBAA11849265 (PosMalaysia)" Tag="SYBAA11849265SYBAB21777027"/>
+                            <ComboBoxItem Content="SYBAB21777027 (PosMalaysia)" Tag="SYBAA11849265SYBAB21777027"/>
+                            <ComboBoxItem Content="NL14869665773829" Tag="NL14869665773829"/>
+                            <ComboBoxItem Content="SY10994025345" Tag="SY10994025345"/>
+                        </ComboBox>
+                        <HyperlinkButton Command="{Binding ProcessInfoCommand}" Name="EncTypesInfo" Foreground="{ThemeResource CorPrimaria}" Margin="10,0">
+                            <SymbolIcon Symbol="Help"/>
+                        </HyperlinkButton>
+                    </StackPanel>
+                </StackPanel>
+                <Button Grid.Column="1"   Background="Transparent"
+                           Margin="10,0"
+                        HorizontalAlignment="Right"
+                        Style="{ThemeResource ButtonRevealStyle}"
+                     Name="Pastde" Command="{Binding ProcessPastCommand}" Width="48" Height="48">
+
+                    <FontIcon Foreground="{ThemeResource CorLight}"   Glyph="&#xEC80;" FontFamily="/Font/ps.ttf#Segoe MDL2 Assets"/>
+                </Button>
+            </Grid>
+
+            <StackPanel Style="{StaticResource DialpadPanelStyle}">
+
+                <local:EncomendaControlDial Visibility="{Binding EncomendaVisibility, Mode=OneWay}" x:Name="Dialpad" />
+                <local2:ProdutoControlDial Visibility="{Binding ProdutoVisibility, Mode=OneWay}" x:Name="Dialpad2" />
+
+                <Button IsEnabled="{Binding ButtonGerarEnabled, Mode=OneWay}"
+                        Style="{StaticResource AccentLongButtonStyle}"
+                        Command="{Binding GerarCommand}" >
+                    <Button.ContentTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <TextBlock  
+                                           Grid.Row="1"
+                                            Text="{Binding ContentButtonGerar, Mode=OneWay}"
+                                           Style="{StaticResource CaptionTextBlockStyle}"
+                                           Margin="0,4,0,0"
+                                           LineHeight="14"
+                                           HorizontalAlignment="Center" />
+                            </Grid>
+                        </DataTemplate>
+                    </Button.ContentTemplate>
+                </Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+
+</UserControl>

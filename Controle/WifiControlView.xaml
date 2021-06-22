@@ -1,0 +1,85 @@
+﻿<UserControl
+    x:Class="Perfect_Scan.Controle.WifiControlView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Perfect_Scan.Controle" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Loaded="UserControl_Loaded"
+    mc:Ignorable="d" >
+    <UserControl.Resources>
+        <DataTemplate x:Key="ResultsListViewTemplate">
+            <Button Name="WifiLista" Click="WifiLista_Click" Margin="1" BorderThickness="0,0,0,1" HorizontalContentAlignment="Left" Style="{StaticResource ItemHistorico}" HorizontalAlignment="Stretch">
+                <StackPanel Orientation="Horizontal" Padding="10" >
+                    <FontIcon Foreground="{ThemeResource Icone}" FontSize="30" Glyph="&#xE016;" Margin="0,0,20,0" FontFamily="/Font/ps.ttf#Segoe MDL2 Assets"/>
+                    <StackPanel>
+                        <TextBlock Foreground="{ThemeResource Texto}"  Style="{ThemeResource BaseTextBlockStyle}" Text="{Binding Path=Ssid}"/>
+                        <TextBlock Foreground="{ThemeResource SubTexto}" Style="{ThemeResource BodyTextBlockStyle}" Text="{Binding Path=SecuritySettings}" />
+                    </StackPanel>
+                </StackPanel>
+            </Button>
+        </DataTemplate> 
+    </UserControl.Resources> 
+    <Grid>
+        <StackPanel>
+            <StackPanel Margin="10,5,10,10" Opacity="0.5" Orientation="Horizontal">
+                <FontIcon Foreground="{ThemeResource Icone}" FontSize="30" Glyph="&#xE016;" Margin="0,0,20,0"  FontFamily="/Font/ps.ttf#Segoe MDL2 Assets"/>
+                <TextBlock Foreground="{ThemeResource Texto}" FontSize="19" x:Uid="DataWifi"/>
+            </StackPanel>
+            <StackPanel Margin="20,0">
+                <TextBlock Text="{Binding PlaceholderTextWifiName}" Foreground="{ThemeResource CorPrimaria}" FontSize="13" Opacity="0.6"/>
+                <TextBox
+                                    MinWidth="400"
+                                    HorizontalAlignment="Left"
+                                    Name="WifiName"
+                    Text="{Binding WifiNameDigit, Mode=OneWay}"
+                                    MaxLength="32"   
+                                    Style="{StaticResource WifiLayout}" 
+                                    x:Uid="Nomedarede"/>
+            </StackPanel>
+            <StackPanel  Margin="20,10">
+                <TextBlock FontSize="13" Foreground="{ThemeResource Texto}"  x:Uid="Segury" Opacity="0.6"/>
+                <ComboBox
+                                    Style="{ThemeResource ComboBoxStyle1}"
+                                Name="WifiSelector"  
+                                SelectedIndex="{Binding WifiType}" 
+                                Background="Transparent" 
+                                BorderThickness="0">
+                    <ComboBoxItem Content="{x:Bind StringKey.Aberta}"/>
+                    <ComboBoxItem Content="{x:Bind StringKey.Segura}"/>
+                </ComboBox>
+            </StackPanel>
+            <StackPanel Visibility="{Binding WifiPassWord}" Margin="20,0">
+                <TextBlock Text="{Binding PlaceholderTextWifiKey}" Foreground="{ThemeResource CorPrimaria}" FontSize="13" Opacity="0.6"/>
+                <PasswordBox Style="{StaticResource WifiLayoutPassword}"
+                                    InputScope="Password"
+                             Password="{Binding WifiKeyDigit, Mode=OneWay}"
+                                    MinWidth="400"
+                                    MaxLength="50"
+                                    HorizontalAlignment="Left"
+                                    Name="WifiKey" 
+                                    x:Uid="Senha"/>
+            </StackPanel>
+            <StackPanel Margin="20,20,20,0" Orientation="Horizontal">
+
+                <Button x:Uid="ScanWifi" Name="ScanWifi" Command="{Binding WifiScanCommand}" Style="{ThemeResource ButtonStyleContent}" />
+
+                <Button Command="{Binding GerarCommand}" IsEnabled="{Binding ButtonEnabled, Mode=OneWay}" Margin="10,0" x:Uid="GerarInWifi" Name="GerarWifi" Style="{ThemeResource ButtonStyle1}" />
+            </StackPanel>
+            <ScrollViewer VerticalScrollBarVisibility="Hidden">
+                <Grid>
+                    <ProgressRing Foreground="{ThemeResource CorSegundaria}" HorizontalAlignment="Left" Margin="145,30,0,0" IsActive="{Binding WifiDisponivelPrglayout, Mode=OneWay}" Width="50" Height="50" />
+                    <StackPanel Visibility="{Binding WifiDisponivellayout, Mode=OneWay}" Margin="0,20">
+                        <StackPanel Background="{ThemeResource ButtonNormal}" Padding="10" >
+                            <TextBlock  Foreground="{ThemeResource Texto}" x:Uid="ScanWifiAvalible"/>
+                        </StackPanel>
+                        <ScrollViewer>
+                            <ItemsControl x:Name="ResultsListView" ScrollViewer.VerticalScrollBarVisibility="Auto" ItemTemplate="{StaticResource ResultsListViewTemplate}" ItemsSource="{Binding ResultsListView}"/>
+                        </ScrollViewer>
+                    </StackPanel>
+                </Grid>
+            </ScrollViewer>
+        </StackPanel>
+    </Grid>
+
+</UserControl>

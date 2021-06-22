@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
+  <Identity Name="53169IgorDutraSanches.PerfectScanBarcodes" Publisher="CN=BB626929-E26E-4D3F-A710-E716634C666C" Version="20.9.2.0" />
+  <mp:PhoneIdentity PhoneProductId="ca0870a8-6abd-47a9-b8f0-886ec25c7df9" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Properties>
+    <DisplayName>Perfect Scan: Barcodes</DisplayName>
+    <PublisherDisplayName>Igor Dutra Sanches</PublisherDisplayName>
+    <Logo>Assets\Logo da Loja\StoreLogo.png</Logo>
+  </Properties>
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
+  </Dependencies>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="PerfectScanBarcode.App">
+      <uap:VisualElements DisplayName="ms-resource:DisplayName" Square150x150Logo="Assets\Bloco Médio\Square150x150Logo.png" Square44x44Logo="Assets\Logo do App\Square44x44Logo.png" Description="ms-resource:DisplayName" BackgroundColor="#222244">
+        <uap:LockScreen Notification="badge" BadgeLogo="Assets\Logo Notificações\BadgeLogo.png" />
+        <uap:DefaultTile Wide310x150Logo="Assets\Bloco Largo\Wide310x150Logo.png" Square310x310Logo="Assets\Bloco Grande\LargeTile.png" Square71x71Logo="Assets\Bloco Pequeno\SmallTile.png" ShortName="ms-resource:DisplayName">
+          <uap:ShowNameOnTiles>
+            <uap:ShowOn Tile="wide310x150Logo" />
+            <uap:ShowOn Tile="square310x310Logo" />
+          </uap:ShowNameOnTiles>
+        </uap:DefaultTile>
+        <uap:SplashScreen Image="Assets\Tela Inicial\SplashScreen.png" BackgroundColor="#222244" />
+      </uap:VisualElements>
+      <Extensions>
+        <uap:Extension Category="windows.fileTypeAssociation">
+          <uap:FileTypeAssociation Name=".png">
+            <uap:Logo>Assets\App.png</uap:Logo>
+            <uap:InfoTip>Perfect Scan file</uap:InfoTip>
+            <uap:EditFlags OpenIsSafe="true" />
+            <uap:SupportedFileTypes>
+              <uap:FileType>.png</uap:FileType>
+              <uap:FileType>.jpg</uap:FileType>
+              <uap:FileType>.jpeg</uap:FileType>
+              <uap:FileType>.bmp</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.fileTypeAssociation">
+          <uap:FileTypeAssociation Name=".oic">
+            <uap:DisplayName>Perfect Scan Backup</uap:DisplayName>
+            <uap:Logo>Assets\App.png</uap:Logo>
+            <uap:InfoTip>Perfect Scan Backup</uap:InfoTip>
+            <uap:EditFlags OpenIsSafe="true" />
+            <uap:SupportedFileTypes>
+              <uap:FileType>.oic</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap:Extension Category="windows.shareTarget">
+          <uap:ShareTarget Description="Bitmap">
+            <uap:SupportedFileTypes>
+              <uap:FileType>.jpg</uap:FileType>
+              <uap:FileType>.bmp</uap:FileType>
+              <uap:FileType>.jpeg</uap:FileType>
+              <uap:FileType>.png</uap:FileType>
+            </uap:SupportedFileTypes>
+            <uap:DataFormat>Text</uap:DataFormat>
+            <uap:DataFormat>URI</uap:DataFormat>
+          </uap:ShareTarget>
+        </uap:Extension>
+        <uap:Extension Category="windows.protocol">
+          <uap:Protocol Name="perfect-scan">
+            <uap:Logo>Assets\App.png</uap:Logo>
+            <uap:DisplayName>Perfect Scan</uap:DisplayName>
+          </uap:Protocol>
+        </uap:Extension>
+        <uap:Extension Category="windows.protocol">
+          <uap:Protocol Name="tel">
+            <uap:Logo>Assets\App.png</uap:Logo>
+            <uap:DisplayName>Perfect Scan</uap:DisplayName>
+          </uap:Protocol>
+        </uap:Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClientServer" />
+    <Capability Name="internetClient" />
+    <uap:Capability Name="removableStorage" />
+    <uap:Capability Name="contacts" />
+    <uap:Capability Name="picturesLibrary" />
+    <DeviceCapability Name="webcam" />
+    <DeviceCapability Name="wiFiControl" />
+  </Capabilities>
+</Package>

@@ -1,0 +1,214 @@
+﻿<Page
+    x:Class="Perfect_Scan.Paginas.Backups.BackupViewInfo"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Perfect_Scan.Paginas.Backups"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Loaded="Page_Loaded"
+      xmlns:extensions="using:Microsoft.Toolkit.Uwp.UI.Extensions"
+    xmlns:animations="using:Microsoft.Toolkit.Uwp.UI.Animations"
+   xmlns:control="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    xmlns:Windows10version1809="http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsApiContractPresent(Windows.Foundation.UniversalApiContract, 7)">
+
+    <Grid>
+        <Grid VerticalAlignment="Top" Margin="0,-42,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="1"
+                        Margin="10,0" 
+                        Orientation="Horizontal">
+                <Button Background="Transparent"
+                        BorderThickness="0"  
+                       Command="{Binding ShareCommand}"
+                          Windows10version1809:CornerRadius="10"  
+                       Width="42"
+                        Height="42">
+                    <SymbolIcon Symbol="Share" Foreground="{ThemeResource ButtonToolbar}" />
+                </Button>
+                <Button Background="Transparent"
+                        BorderThickness="0"  
+                       Command="{Binding DeleteCommand}"
+                          Windows10version1809:CornerRadius="10"  
+                       Width="42"
+                        Height="42">
+                        <SymbolIcon Symbol="Delete" Foreground="{ThemeResource ButtonToolbar}" />
+                    </Button>
+                <Button Background="Transparent"
+                        BorderThickness="0"  
+                       Command="{Binding ShowEdit}"
+                           Windows10version1809:CornerRadius="10"  
+                     Width="42"
+                        Height="42">
+                    <SymbolIcon Symbol="Edit" Foreground="{ThemeResource ButtonToolbar}" />
+                </Button>
+                <Button Background="Transparent"
+                        BorderThickness="0" 
+                        Command="{Binding RefressCommand}"
+                           Windows10version1809:CornerRadius="10"  
+                      Width="42"
+                        Height="42">
+                    <SymbolIcon Symbol="Refresh" Foreground="{ThemeResource ButtonToolbar}" />
+                </Button>
+            </StackPanel>
+        </Grid>
+
+        <ProgressRing Height="100" Width="100" IsActive="False" Foreground="{ThemeResource CorPrimaria}"/>
+
+        <Grid Margin="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <control:DropShadowPanel BlurRadius="4.0" ShadowOpacity="0.70"  
+                          OffsetX="5.0" OffsetY="4.0" Color="Black">
+                <Grid VerticalAlignment="Top" Background="{ThemeResource SubBackground}" BorderThickness="1" Margin="20">
+                    <StackPanel MinWidth="450" Visibility="{Binding LayoutView, Mode=OneWay}" Margin="5" Padding="0,0,20,10"
+              extensions:VisualExtensions.CenterPoint="50,50,0">
+
+                        <animations:Implicit.ShowAnimations>
+                            <animations:TranslationAnimation Duration="0:0:1" From="0, -200, 0" To="0" ></animations:TranslationAnimation>
+                            <animations:OpacityAnimation Duration="0:0:1" From="0" To="1.0"></animations:OpacityAnimation>
+                        </animations:Implicit.ShowAnimations>
+
+                        <animations:Implicit.HideAnimations>
+                            <animations:ScalarAnimation Target="Opacity" Duration="0:0:1" To="0.0"></animations:ScalarAnimation>
+                            <animations:ScalarAnimation Target="Translation.Y" Duration="0:0:1" To="-200">
+                                <animations:ScalarKeyFrame Key="0.1" Value="30"></animations:ScalarKeyFrame>
+                                <animations:ScalarKeyFrame Key="0.5" Value="0.0"></animations:ScalarKeyFrame>
+                            </animations:ScalarAnimation>
+                        </animations:Implicit.HideAnimations>
+
+                        <animations:Implicit.Animations>
+                            <animations:Vector3Animation Target="Offset"  Duration="0:0:1"></animations:Vector3Animation>
+                            <animations:ScalarAnimation Target="RotationAngleInDegrees" ImplicitTarget="Offset"  Duration="0:0:1.2" From="0" To="0">
+                                <animations:ScalarKeyFrame Key="0.9" Value="80"></animations:ScalarKeyFrame>
+                            </animations:ScalarAnimation>
+                            <animations:Vector3Animation Target="Scale" Duration="0:0:1"></animations:Vector3Animation>
+                        </animations:Implicit.Animations>
+
+                        <StackPanel>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid VerticalAlignment="Center" Margin="20" Opacity="0.6" Width="42" Height="42" CornerRadius="100">
+                                    <FontIcon FontFamily="/Font/ps.ttf#Segoe MDL2 Assets" Glyph="&#xE002;" Foreground="{ThemeResource Icone}"/>
+                                </Grid>
+                                <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                                    <TextBlock Visibility="{Binding DisplayNameVisible, Mode=OneWay}" Text="{Binding DisplayName, Mode=OneWay}"  Style="{ThemeResource BaseTextBlockStyle}" Foreground="{ThemeResource Texto}"/>
+                                    <TextBlock Visibility="{Binding DisplaySizeVisible, Mode=OneWay}" Text="{Binding Size, Mode=OneWay}" Margin="0,0,15,0" Foreground="{ThemeResource HistoricoSubTexto}" Style="{ThemeResource BodyTextBlockStyle}" TextWrapping="NoWrap" TextTrimming="CharacterEllipsis"/>
+                                </StackPanel>
+                            </Grid>
+                        </StackPanel>
+                        <StackPanel Margin="10">
+                            <TextBlock Visibility="{Binding DisplayPathVisible, Mode=OneWay}" x:Uid="CaminhodoBackup" Margin="0,0,15,0" Foreground="{ThemeResource Texto}" Style="{ThemeResource BodyTextBlockStyle}" TextWrapping="NoWrap" TextTrimming="CharacterEllipsis"/>
+                            <TextBlock Visibility="{Binding DisplayPathVisible, Mode=OneWay}" Text="{Binding DisplayPath, Mode=OneWay}" Margin="0,0,15,0" Foreground="{ThemeResource Titulo}" Style="{ThemeResource BodyTextBlockStyle}" TextWrapping="NoWrap" TextTrimming="CharacterEllipsis"/>
+
+                            <Grid Width="200" Height="1" Background="{ThemeResource CorLinha}" Margin="0,20"/>
+
+                            <RichTextBlock Visibility="{Binding DisplayDeviceVisible, Mode=OneWay}" IsTextSelectionEnabled="False">
+                                <Paragraph Margin="0,0,0,5">
+                                    <Run x:Uid="Aparelho" Foreground="{ThemeResource Texto}"/>
+                                    <Run Text="{Binding Device, Mode=OneWay}" Foreground="{ThemeResource SubTexto}"/>
+                                </Paragraph> 
+                            </RichTextBlock>
+                            <RichTextBlock Visibility="{Binding DisplaySystemVisible, Mode=OneWay}" IsTextSelectionEnabled="False">
+                                <Paragraph Margin="0,0,0,5">
+                                    <Run x:Uid="SistemaOpercional" Foreground="{ThemeResource Texto}"/>
+                                    <Run Text="{Binding System, Mode=OneWay}" Foreground="{ThemeResource SubTexto}"/>
+                                </Paragraph>
+                            </RichTextBlock>
+                            <RichTextBlock Visibility="{Binding DisplayVersionVisible, Mode=OneWay}" IsTextSelectionEnabled="False">
+                                <Paragraph Margin="0,0,0,5">
+                                    <Run x:Uid="Versao" Foreground="{ThemeResource Texto}"/>
+                                    <Run Text="{Binding Version, Mode=OneWay}" Foreground="{ThemeResource SubTexto}"/>
+                                </Paragraph>
+                            </RichTextBlock>
+                            <RichTextBlock Visibility="{Binding DisplayDataVisible, Mode=OneWay}" IsTextSelectionEnabled="False">
+                                <Paragraph Margin="0,0,0,5">
+                                    <Run x:Uid="DataBackup" Foreground="{ThemeResource Texto}"/>
+                                    <Run Text="{Binding Data, Mode=OneWay}" Foreground="{ThemeResource SubTexto}"/>
+                                </Paragraph>
+                            </RichTextBlock>
+                            <RichTextBlock Visibility="{Binding DisplayCountEVisible, Mode=OneWay}" IsTextSelectionEnabled="False">
+                                <Paragraph Margin="0,0,0,5">
+                                    <Run x:Uid="EscaneadosBackupCount" Foreground="{ThemeResource Texto}"/>
+                                    <Run Text="{Binding CountE, Mode=OneWay}" Foreground="{ThemeResource SubTexto}"/>
+                                </Paragraph> 
+                            </RichTextBlock>
+                            <RichTextBlock Visibility="{Binding DisplayCountGVisible, Mode=OneWay}" IsTextSelectionEnabled="False">
+                                <Paragraph Margin="0,0,0,5">
+                                    <Run x:Uid="GeradosBackupCount" Foreground="{ThemeResource Texto}"/>
+                                    <Run Text="{Binding CountG, Mode=OneWay}" Foreground="{ThemeResource SubTexto}"/>
+                                </Paragraph>
+                            </RichTextBlock>
+
+                            <StackPanel Margin="0,20" Orientation="Horizontal">
+                                <CheckBox Command="{Binding CheckedSCommand}" IsEnabled="{Binding IsEnabledS, Mode=OneWay}" IsChecked="{Binding IsCheckedS, Mode=OneWay}" Style="{StaticResource CheckBoxStyle2}" x:Uid="EscaneadosBackup" />
+                                <CheckBox Command="{Binding CheckedGCommand}"  IsEnabled="{Binding IsEnabledG, Mode=OneWay}" IsChecked="{Binding IsCheckedG, Mode=OneWay}" Style="{StaticResource CheckBoxStyle2}" x:Uid="GeradosBackup" />
+                            </StackPanel>
+
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,5,0,10">
+                            <Button x:Uid="addReplace"
+                                    Margin="0,0,5,0"
+                                Command="{Binding AddRestaurar}"
+                                        IsEnabled="{Binding IsBtnEnabled, Mode=OneWay}"
+                                    Style="{ThemeResource ButtonStyle1}"/>
+                            <Button x:Uid="addExistente"
+                                    Command="{Binding AddEsxistentes}"
+                                    IsEnabled="{Binding IsBtnEnabled, Mode=OneWay}"
+                                    Style="{ThemeResource ButtonStyleContent}"/>
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel Visibility="{Binding LayoutProgress, Mode=OneWay}" Margin="5" Padding="0,0,20,10">
+                        <TextBlock Text="{Binding LayoutProgressTextState, Mode=OneWay}" Margin="0,0,15,0" Foreground="{ThemeResource HistoricoSubTexto}" Style="{ThemeResource BodyTextBlockStyle}" TextWrapping="NoWrap" TextTrimming="CharacterEllipsis"/>
+                    </StackPanel>
+                </Grid>
+            </control:DropShadowPanel>
+        </Grid>
+        <ContentDialog Name="DialogEdit">
+            <StackPanel>
+                <StackPanel  Orientation="Horizontal" HorizontalAlignment="Center">
+
+                    <TextBox 
+                        Style="{ThemeResource TextBoxStyle}"
+                           Tag="&#xE104;"
+                        Name="EditName"
+                                 InputScope="PersonalFullName"
+                           Text="{Binding Remonear, Mode=OneWay}"
+                             MaxLength="50"
+                        Foreground="{ThemeResource Titulo}"
+                             x:Uid="newNameCode"
+                         Width="270" />
+                </StackPanel>
+                <TextBlock Text="{Binding RemonearError, Mode=OneWay}"
+                        Foreground="Red"  
+                       FontSize="12"/>
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,-30">
+                    <Button Command="{Binding CancelarEditarTituloCommand}"
+                          VerticalAlignment="Center"  
+                    x:Uid="btnCancelar"
+                            Style="{ThemeResource ButtonStyleContent}"
+                    Width="100"
+                     Height="32" 
+                            Foreground="Red" />
+                    <Button 
+                            VerticalAlignment="Center"  
+                      Width="100"
+                        Command="{Binding SalvarEditarTituloCommand}"
+                    Height="32" 
+                    Style="{StaticResource ButtonStyle1}" 
+                    x:Uid="BtnSalvar" />
+                </StackPanel>
+            </StackPanel>
+        </ContentDialog>
+
+    </Grid>
+</Page>

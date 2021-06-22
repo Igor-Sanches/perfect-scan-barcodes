@@ -1,0 +1,80 @@
+﻿<UserControl
+    x:Class="Perfect_Scan.Controle.Visualizador.NumeroControlVisualizador"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Perfect_Scan.Controle.Visualizador"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Windows10version1809="http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsApiContractPresent(Windows.Foundation.UniversalApiContract, 7)"
+    mc:Ignorable="d">
+
+    <Grid>
+        <ProgressRing VerticalAlignment="Center"
+                      HorizontalAlignment="Center"
+                      Height="60"
+                      Width="60"
+                      IsActive="{Binding IsProgressNumero, Mode=OneWay}"/>
+
+        <StackPanel Visibility="{Binding GridViewLayoutNumero, Mode=OneWay}">
+            <StackPanel Margin="10,5,10,10" Opacity="0.5" Orientation="Horizontal">
+                <FontIcon Foreground="{ThemeResource Icone}" FontSize="30" Glyph="&#xE13A;" Margin="0,0,20,0"  FontFamily="/Font/ps.ttf#Segoe MDL2 Assets"/>
+                <TextBlock Foreground="{ThemeResource Texto}" FontSize="19" x:Uid="ViewNumero"/>
+            </StackPanel>
+
+            <Grid HorizontalAlignment="Center" Style="{StaticResource DigitViewGridStyle}">
+ 
+                <ScrollViewer x:Name="dialerNumberControlScrollviewer" 
+                               HorizontalAlignment="Center"
+                              Style="{StaticResource DigitViewScrollerStyle}">
+
+                    <TextBlock Style="{StaticResource DigitViewTextStyle}" 
+                                HorizontalAlignment="Center"
+                          SizeChanged="OnDialerNumberControlSizeChanged"
+                               TextAlignment="Center"   
+                               Name="NumberToDial"
+                               SelectionHighlightColor="{ThemeResource CorPrimaria}"
+                               IsTextSelectionEnabled="True"
+                               Foreground="{ThemeResource Texto}"
+                               Text="{Binding NumberToDial, Mode=OneWay}"/>
+                </ScrollViewer>
+ 
+            </Grid>
+
+            <Grid Margin="0,50,0,0"  
+                       HorizontalAlignment="Stretch">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="108"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button Height="48" 
+                        Command="{Binding DialLauncher}"
+                    Windows10version1809:CornerRadius="100"
+                    Width="48" 
+                        Style="{ThemeResource ButtonFab}"
+                        HorizontalAlignment="Right">
+                    <FontIcon Glyph="&#xE75F;"/>
+                </Button>
+                <Button Height="68"
+                        Grid.Column="1"
+                        Command="{Binding Call}"
+                    Windows10version1809:CornerRadius="100"
+                    Width="68" 
+                        Style="{ThemeResource ButtonFab}"
+                        HorizontalAlignment="Center">
+                    <FontIcon Glyph="&#xE13A;"/>
+                </Button>
+                <Button Height="48" 
+                       Command="{Binding SaveLauncher}"
+                     Windows10version1809:CornerRadius="100"
+                    Width="48" 
+                        Grid.Column="2"
+                        Style="{ThemeResource ButtonFab}"
+                        HorizontalAlignment="Left">
+                    <FontIcon Glyph="&#xE1D4;"/>
+                </Button>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</UserControl>

@@ -1,0 +1,159 @@
+﻿<Page
+    x:Class="Perfect_Scan.Paginas.ContaView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Perfect_Scan.Paginas"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Loaded="Page_Loaded"
+      xmlns:extensions="using:Microsoft.Toolkit.Uwp.UI.Extensions"
+    xmlns:animations="using:Microsoft.Toolkit.Uwp.UI.Animations"
+   xmlns:control="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    Background="{ThemeResource Background}"
+    xmlns:Windows10version1809="http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsApiContractPresent(Windows.Foundation.UniversalApiContract, 7)">
+
+    <Grid>
+        <ScrollViewer>
+            <control:DropShadowPanel   
+                                 BlurRadius="4.0" 
+            ShadowOpacity="0.70"  
+            HorizontalAlignment="Stretch"
+                          OffsetX="5.0" OffsetY="4.0"
+            Color="Black">
+                <Grid VerticalAlignment="Top" 
+            HorizontalAlignment="Stretch"
+                 
+                  Background="{ThemeResource Background}" 
+                  BorderThickness="1" Margin="20">
+                    <ScrollViewer   HorizontalAlignment="Stretch"
+         VerticalScrollBarVisibility="Hidden">
+                        <StackPanel MinWidth="450"
+                            Margin="5" 
+                            Padding="0,0,20,10"
+              extensions:VisualExtensions.CenterPoint="50,50,0">
+
+                            <animations:Implicit.ShowAnimations>
+                                <animations:TranslationAnimation Duration="0:0:1" From="0, -200, 0" To="0" ></animations:TranslationAnimation>
+                                <animations:OpacityAnimation Duration="0:0:1" From="0" To="1.0"></animations:OpacityAnimation>
+                            </animations:Implicit.ShowAnimations>
+
+                            <animations:Implicit.HideAnimations>
+                                <animations:ScalarAnimation Target="Opacity" Duration="0:0:1" To="0.0"></animations:ScalarAnimation>
+                                <animations:ScalarAnimation Target="Translation.Y" Duration="0:0:1" To="-200">
+                                    <animations:ScalarKeyFrame Key="0.1" Value="30"></animations:ScalarKeyFrame>
+                                    <animations:ScalarKeyFrame Key="0.5" Value="0.0"></animations:ScalarKeyFrame>
+                                </animations:ScalarAnimation>
+                            </animations:Implicit.HideAnimations>
+
+                            <animations:Implicit.Animations>
+                                <animations:Vector3Animation Target="Offset"  Duration="0:0:1"></animations:Vector3Animation>
+                                <animations:ScalarAnimation Target="RotationAngleInDegrees" ImplicitTarget="Offset"  Duration="0:0:1.2" From="0" To="0">
+                                    <animations:ScalarKeyFrame Key="0.9" Value="80"></animations:ScalarKeyFrame>
+                                </animations:ScalarAnimation>
+                                <animations:Vector3Animation Target="Scale" Duration="0:0:1"></animations:Vector3Animation>
+                            </animations:Implicit.Animations>
+
+                            <StackPanel Margin="10,30,0,0">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock VerticalAlignment="Center" x:Uid="contaText" FontSize="18"/>
+                                    <Grid VerticalAlignment="Center" Background="{ThemeResource DialDisplay}" CornerRadius="15" Padding="12,10" Grid.Column="1">
+                                        <StackPanel Orientation="Horizontal">
+                                            <Grid CornerRadius="100" Margin="0,0,10,0" Background="{ThemeResource Background}">
+                                                <FontIcon Glyph="&#xE156;"  Margin="10"  FontFamily="/Font/ps.ttf#Segoe MDL2 Assets" Foreground="{ThemeResource Icone}" />
+                                            </Grid>
+                                            <StackPanel>
+                                                <TextBlock Style="{ThemeResource BaseTextBlockStyle}"  Foreground="{ThemeResource Texto}" Text="{Binding Nome, Mode=OneWay}" MaxWidth="270" TextTrimming="CharacterEllipsis" TextWrapping="NoWrap" />
+                                                <TextBlock Foreground="{ThemeResource HistoricoSubTexto}" Style="{ThemeResource BodyTextBlockStyle}" Text="{Binding Email, Mode=OneWay}" TextTrimming="CharacterEllipsis" TextWrapping="NoWrap" />
+                                            </StackPanel>
+                                        </StackPanel>
+                                    </Grid>
+                                </Grid>
+
+                                <StackPanel>
+
+                                    <Grid Background="{ThemeResource CorLinhaSeparatorConfiguracoes}" Height="1" HorizontalAlignment="Stretch" Margin="0,10"/>
+
+                                    <ContentPresenter x:Uid="syncLimit" Foreground="{ThemeResource CorPrimaria}"/>
+
+                                    <ToggleSwitch IsEnabled="False" IsOn="{Binding ContNuvemLimit, Mode=OneWay}" Toggled="NuvemConected_Toggled" Tag="NuvemToLimit" Margin="0,10,0,8" x:Uid="contaLimitNuvemSettings" Style="{ThemeResource ToggleSwitchStyle1}"/>
+
+                                    <Grid Background="{ThemeResource CorLinhaSeparatorConfiguracoes}" Height="1" HorizontalAlignment="Stretch" Margin="0,10"/>
+
+                                    <ContentPresenter x:Uid="syncTo" Foreground="{ThemeResource CorPrimaria}"/>
+
+                                    <ToggleSwitch IsEnabled="false" IsOn="{Binding ContToEscaneadosaNuvemConected, Mode=OneWay}" Toggled="NuvemConected_Toggled" Tag="NuvemToEscaneados" Margin="0,10,0,8" x:Uid="contaEscaneadosNuvemSettings" Style="{ThemeResource ToggleSwitchStyle1}"/>
+
+                                    <ToggleSwitch IsEnabled="false" IsOn="{Binding ContToGeradosaNuvemConected, Mode=OneWay}" Toggled="NuvemConected_Toggled" Tag="NuvemToGerados" Margin="0,10,0,8" x:Uid="contaGeradoNuvemSettings" Style="{ThemeResource ToggleSwitchStyle1}"/>
+
+                                    <Grid Background="{ThemeResource CorLinhaSeparatorConfiguracoes}" Height="1" HorizontalAlignment="Stretch" Margin="0,10"/>
+
+                                    <ContentPresenter x:Uid="syncFrom" Foreground="{ThemeResource CorPrimaria}"/>
+
+                                    <ToggleSwitch IsEnabled="false" IsOn="{Binding ContFromEscaneadosaNuvemConected, Mode=OneWay}" Toggled="NuvemConected_Toggled" Tag="NuvemFromEscaneados" Margin="0,10,0,8" x:Uid="contFromaEscaneadosNuvemSettings" Style="{ThemeResource ToggleSwitchStyle1}"/>
+
+                                    <ToggleSwitch IsEnabled="false" IsOn="{Binding ContFromGeradosaNuvemConected, Mode=OneWay}" Toggled="NuvemConected_Toggled" Tag="NuvemFromGerados" Margin="0,10,0,8" x:Uid="contaFromGeradoNuvemSettings" Style="{ThemeResource ToggleSwitchStyle1}"/>
+
+                                    <Grid Background="{ThemeResource CorLinhaSeparatorConfiguracoes}" Height="1" HorizontalAlignment="Stretch" Margin="0,10"/>
+
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+                                        <StackPanel>
+                                            <Button 
+                                             IsEnabled="False"
+                                               Command="{Binding SincronizarDaNuvem}"
+                                    Style="{ThemeResource ButtonStyle1}" 
+                                    Margin="0,10,0,10"
+                                            x:Uid="btnSinzdaNuvem"/>
+                                            <Button 
+                                                IsEnabled="False"
+                                            Command="{Binding SincronizarParaNuvem}"
+                                    Style="{ThemeResource ButtonStyleContent}" 
+                                           x:Uid="btnSinzparaNuvem"/>
+                                        </StackPanel>
+                                        <Button
+                                            IsEnabled="False"
+                                            Command="{Binding CommandSair}"
+                                        Style="{ThemeResource ButtonRevealStyle}"
+                                        Grid.Column="1"
+                                        Content="Sair"/>
+                                    </Grid>
+
+                                </StackPanel>
+
+                            </StackPanel>
+
+                        </StackPanel>
+
+                    </ScrollViewer>
+                </Grid>
+            </control:DropShadowPanel>
+        </ScrollViewer>
+
+
+        <Grid Background="{ThemeResource CorProgressoRing}"  
+              Visibility="{Binding ProgressDialog, Mode=OneWay}"
+              Name="PanelProgress" 
+                       BorderThickness="0" >
+            <StackPanel
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center" 
+                Padding="3"
+                CornerRadius="100"
+                Background="{ThemeResource CorSegundaria}">
+                <ProgressRing IsActive="True"
+                              Width="60"
+                              Height="60"
+                              Foreground="{ThemeResource CorLight}"/>
+            </StackPanel>
+        </Grid>
+
+    </Grid>
+</Page>

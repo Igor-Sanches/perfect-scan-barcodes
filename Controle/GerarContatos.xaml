@@ -1,0 +1,143 @@
+﻿<UserControl
+    x:Class="Perfect_Scan.Controle.GerarContatos"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Perfect_Scan.Controle"
+    Loaded="UserControl_Loaded"
+    xmlns:helper="using:Perfect_Scan.Models"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:prim="using:Windows.UI.Xaml.Controls.Primitives">
+
+
+    <UserControl.Resources>
+        <CollectionViewSource x:Name="groupedContactsCvs" 
+                              IsSourceGrouped="true"
+                              ItemsPath="InternalList" 
+                              Source="{x:Bind contactsVM.GroupsOfContacts, Mode=OneWay}"/>
+        <prim:JumpListItemBackgroundConverter x:Key="JumpListItemBackground" />
+        <prim:JumpListItemForegroundConverter x:Key="JumpListItemForeground" />
+    </UserControl.Resources>
+
+    <Grid>
+
+     
+        <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="{x:Bind contactsVM.ContactsListGridHeight, Mode=OneWay}"/>
+            <RowDefinition Height="{x:Bind contactsVM.ContactsGroupGridHeight, Mode=OneWay}"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="{x:Bind contactsVM.ContactsStatusText, Mode=OneWay}"
+                       Grid.Row="3"
+                       VerticalAlignment="Top"
+                   Margin="0,30"
+                   Foreground="{ThemeResource Texto}"
+                       Visibility="{x:Bind contactsVM.ContactsStatusVisibleState, Mode=OneWay}"
+                       HorizontalAlignment="Center"/>
+ 
+        <SemanticZoom x:Name="ContactGroupView"
+                      Grid.Row="2" 
+                      Grid.RowSpan="7"
+                      Margin="0,0,0,20"
+                      Style="{StaticResource AlphaJumpListStyle}"           
+                      ViewChangeStarted="UpdateCollapseState"
+                      Visibility="{x:Bind contactsVM.ContactsGroupVisibleState, Mode=OneWay}">
+            <SemanticZoom.ZoomedInView>
+                <ListView ScrollViewer.IsVerticalRailEnabled="True"                       
+                          ScrollViewer.IsVerticalScrollChainingEnabled="False"
+                          ScrollViewer.VerticalScrollBarVisibility="Auto"
+                          IsItemClickEnabled="true"
+                          ItemClick="OnContactItemClick"
+                          SelectionMode="None"                                                       
+                          ItemsSource="{Binding Source={StaticResource groupedContactsCvs}}">
+                    <ListView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <ItemsStackPanel/>
+                        </ItemsPanelTemplate>
+                    </ListView.ItemsPanel>
+                    <ListView.ItemTemplate>
+                        <DataTemplate x:DataType="helper:Contatos">
+                            <StackPanel Orientation="Horizontal" Height="50">
+                                <Ellipse Width="32" Height="32" VerticalAlignment="Center">
+                                    <Ellipse.Fill>
+                                        <ImageBrush ImageSource="{x:Bind ContactImage}"/>
+                                    </Ellipse.Fill>
+                                </Ellipse>
+                                <StackPanel Margin="12,0,0,0" Orientation="Vertical" VerticalAlignment="Center" >
+                                    <TextBlock Text="{Binding DisplayName, Mode=OneWay}" Style="{ThemeResource BaseTextBlockStyle}" Foreground="{ThemeResource Texto}" />
+                                    <TextBlock Text="{Binding Number, Mode=OneWay}" Style="{ThemeResource BodyTextBlockStyle}" Foreground="{ThemeResource SubTexto}"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                    <ListView.GroupStyle>
+                        <GroupStyle HidesIfEmpty="True">
+                            <GroupStyle.HeaderTemplate>
+                                <DataTemplate>
+                                    <TextBlock 
+                                        Text="{Binding Key, Mode=OneWay}"
+                                        FontWeight="SemiBold"
+                                        FontSize="22"
+                                        Margin="12,0,0,4"
+                                        Foreground="{ThemeResource CorPrimaria}"/>
+                                </DataTemplate>
+                            </GroupStyle.HeaderTemplate>
+                        </GroupStyle>
+                    </ListView.GroupStyle>
+                </ListView>
+            </SemanticZoom.ZoomedInView>
+
+            <SemanticZoom.ZoomedOutView>
+                <GridView
+                    Background="Transparent"
+                    ItemsSource="{Binding Source={StaticResource groupedContactsCvs}, Path=CollectionGroups}"
+                    Padding="8"                   
+                    ScrollViewer.HorizontalScrollMode="Disabled"
+                    ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                    ScrollViewer.IsVerticalRailEnabled="True"
+                    ScrollViewer.IsVerticalScrollChainingEnabled="False"
+                    ScrollViewer.VerticalScrollMode="Auto"
+                    ScrollViewer.VerticalScrollBarVisibility="Auto"  
+                    SelectionMode="None">
+                    <GridView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <ItemsWrapGrid Orientation="Horizontal" />
+                        </ItemsPanelTemplate>
+                    </GridView.ItemsPanel>
+                    <GridView.ItemTemplate>
+                        <DataTemplate>
+                            <Border                                
+                                Height="65"
+                                Width="65"
+                                Background="{Binding Converter={StaticResource JumpListItemBackground}}"
+                                HorizontalAlignment="Left"
+                                Margin="4.5">
+                                <TextBlock
+                                    FontSize="40"
+                                    FontWeight="SemiBold"
+                                    Foreground="{Binding Converter={StaticResource JumpListItemForeground}}"
+                                    HorizontalAlignment="Left"
+                                    Padding="7,0"
+                                    Text="{Binding Group.Key, Mode=OneWay}"
+                                    VerticalAlignment="Bottom"
+                                    AutomationProperties.AccessibilityView="Raw" />
+                            </Border>
+                        </DataTemplate>
+                    </GridView.ItemTemplate>
+                </GridView>
+            </SemanticZoom.ZoomedOutView>
+        </SemanticZoom>
+ 
+    </Grid>
+     
+        <Grid Name="ButtonFind"  Visibility="{x:Bind contactsVM.ContactsGroupVisibleState, Mode=OneWay}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="16">
+            <Button Command="{Binding ContactRelayCommand}" Style="{ThemeResource ButtonFab}"  Width="48" Height="48" >
+                <SymbolIcon Symbol="Find" Foreground="{ThemeResource CorLight}"/>
+            </Button>
+        </Grid>
+
+    </Grid>
+</UserControl>

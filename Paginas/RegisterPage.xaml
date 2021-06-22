@@ -1,0 +1,197 @@
+﻿<Page
+    x:Class="Perfect_Scan.Paginas.RegisterPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Perfect_Scan.Paginas"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:Windows10version1809="http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsApiContractPresent(Windows.Foundation.UniversalApiContract, 7)"
+  mc:Ignorable="d"
+    Background="{ThemeResource Background}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Button Background="Transparent"
+                Height="48"
+                        Click="ButtonBack_Click"
+                Name="ButtonBack"
+                Style="{ThemeResource BtnIconeImage}"
+                VerticalAlignment="Top"
+                Width="48">
+                <FontIcon FontFamily="/Font/ps.ttf#Segoe MDL2 Assets"
+                               Foreground="{ThemeResource Icone}" 
+                                         Glyph="&#xE0A6;" 
+                          Margin="10,0"/>
+            </Button>
+             
+        <StackPanel VerticalAlignment="Center"   
+                    Grid.Row="1" 
+                    HorizontalAlignment="Center">
+
+
+                <BitmapIcon       
+                    Foreground="{ThemeResource Icone}"
+                 UriSource="Assets/icone_nova_conta.png"
+                   Height="90"
+                   HorizontalAlignment="Center"
+                   Margin="0,0,0,40"/>
+
+            <StackPanel>
+                <StackPanel Orientation="Horizontal" >
+                    <TextBox Style="{ThemeResource TextBoxStyle}"
+                         Name="nameUser"
+                             Tag="&#xE13D;"
+                             InputScope="PersonalFullName"
+                             PlaceholderText="Nome e Sobrenome"
+                         Width="270" />
+                </StackPanel>
+                <TextBlock Name="erroName"
+                        Foreground="Red"
+                       FontSize="12"/>
+            </StackPanel>
+            <StackPanel>
+                <StackPanel Orientation="Horizontal" >
+                    <TextBox Style="{ThemeResource TextBoxStyle}"
+                           Tag="&#xE166;"
+                           Name="emailUser"
+                             InputScope="EmailNameOrAddress"
+                             PlaceholderText="E-Mail"
+                         Width="270" />
+                </StackPanel>
+                <TextBlock Name="erroEmail"
+                        Foreground="Red"
+                       FontSize="12"/>
+            </StackPanel>
+            <StackPanel>
+                <StackPanel Orientation="Horizontal" >
+                        <PasswordBox Style="{ThemeResource LoginLayoutPassword}"
+                             Name="SenhaUser"
+                             Tag="&#xE192;"
+                             InputScope="Password"
+                             PlaceholderText="Senha"
+                         Width="270" />
+                </StackPanel>
+                <TextBlock Name="erroSenha"
+                        Foreground="Red"
+                       FontSize="12"/>
+            </StackPanel>
+
+                <StackPanel Margin="0,15,0,0"  HorizontalAlignment="Center">
+                <StackPanel
+                 Orientation="Horizontal">
+
+                        <FontIcon FontFamily="/Font/ps.ttf#Segoe MDL2 Assets" Foreground="{ThemeResource Icone}" 
+                                         Glyph="&#xE83d;"
+                          Margin="10,0"/>
+                    <TextBox MaxLength="2"  
+                           Name="pass1"
+                         Style="{StaticResource TextBoxStyleDuo}"/>
+
+                    <Grid Width="12" 
+                      Background="#FF1D6EB2"
+                      Height="2"/>
+                    <TextBox MaxLength="2" 
+                          Name="pass2"
+                         Style="{StaticResource TextBoxStyleDuo}"/>
+                    <Grid Width="12"
+                      Background="#FF1D6EB2"
+                      Height="2"/>
+                    <TextBox MaxLength="2" 
+                             Name="pass3"
+                       Style="{StaticResource TextBoxStyleDuo}"/>
+                    <Grid Width="12"
+                      Background="#FF1D6EB2"
+                      Height="2"/>
+                    <TextBox MaxLength="2" 
+                           Name="pass4"
+                       Style="{StaticResource TextBoxStyleDuo}"/>
+                </StackPanel>
+                <TextBlock Name="errroPassKey"
+                     Foreground="Red" 
+                       FontSize="12"/>
+
+            </StackPanel>
+
+
+                <StackPanel Margin="0,10" HorizontalAlignment="Center">
+                    <StackPanel Orientation="Horizontal"  >
+                    <Button 
+                            VerticalAlignment="Center"
+                        x:Uid="enter"   
+                       Width="100"
+                        Click="Enter_Click"
+                    Height="32" 
+                    Style="{StaticResource ButtonStyleWhite}"
+                    Name="Enter" 
+                     Windows10version1809:CornerRadius="15" />
+                   <Grid Height="2" Margin="0,0,-2,0" Background="{ThemeResource ButtonSegundarioNormal}" Width="7"/>
+                        <Grid Height="2" Margin="-2,0,0,0" Background="{ThemeResource ButtonPrimarioNormal}" Width="7"/>
+                        <Button Windows10version1809:CornerRadius="15"
+                          VerticalAlignment="Center"  
+                     x:Uid="register" 
+                    Name="Register" 
+                           Click="Register_Click"
+                    Width="100"
+                     Height="32" 
+                    Style="{StaticResource ButtonStyle1}" />
+                </StackPanel> 
+
+            </StackPanel>
+
+        </StackPanel>
+ 
+    
+        </Grid>
+        <Grid Background="{ThemeResource CorProgressoRing}"
+              Visibility="Collapsed"
+              Name="PanelProgress" 
+                       BorderThickness="0"
+                       Windows10version1809:CornerRadius="20"  >
+            <StackPanel
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center" 
+                Padding="3"
+                CornerRadius="100"
+                Background="{ThemeResource CorSegundaria}">
+                <ProgressRing IsActive="True"
+                              Width="60"
+                              Height="60"
+                              Foreground="{ThemeResource CorLight}"/>
+            </StackPanel>
+        </Grid>
+        <Grid
+                    Grid.Row="1"  
+                    Name="Toast"
+                    Visibility="Collapsed"
+                    Opacity="10" 
+                    Background="{ThemeResource ToastBackground}">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <FontIcon Foreground="{ThemeResource Icone}" VerticalAlignment="Center" Margin="20,0,0,0" Name="ToastIcon" FontFamily="/Font/ps.ttf#Segoe MDL2 Assets" HorizontalAlignment="Center"/>
+
+            <TextBlock
+                        Name="ToastText"
+                        Grid.Column="1"
+                        Margin="15" 
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        TextWrapping="Wrap"
+                        MaxLines="3"
+                        TextAlignment="Center"
+                        TextTrimming="CharacterEllipsis"
+                        Foreground="{ThemeResource Texto}"/>
+        </Grid>
+    </Grid>
+</Page>

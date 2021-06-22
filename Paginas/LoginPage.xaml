@@ -1,0 +1,194 @@
+﻿<Page
+    x:Class="Perfect_Scan.Paginas.LoginPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Perfect_Scan.Paginas"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:Windows10version1809="http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsApiContractPresent(Windows.Foundation.UniversalApiContract, 7)"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    mc:Ignorable="d"
+    Background="{ThemeResource Background}">
+
+    <Grid> 
+       
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid Visibility="Visible">
+            <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/> 
+            </Grid.RowDefinitions>
+                <Button Background="Transparent"
+                Height="48"
+                        Click="ButtonBack_Click"
+                Name="ButtonBack" 
+                        Style="{ThemeResource BtnIconeImage}"
+                VerticalAlignment="Top"
+                Width="48">
+                <FontIcon FontFamily="/Font/ps.ttf#Segoe MDL2 Assets"
+                               Foreground="{ThemeResource Icone}" 
+                                         Glyph="&#xE0A6;" 
+                          Margin="10,0"/>
+                </Button>
+                <StackPanel VerticalAlignment="Center"   
+                    Grid.Row="1"
+                    HorizontalAlignment="Center">
+
+                <BitmapIcon                Foreground="{ThemeResource Icone}"
+                 UriSource="Assets/icone_conta.png"
+                   Height="90"
+                   HorizontalAlignment="Center" Margin="0,0,0,40"/>
+                <StackPanel Margin="0,0,0,8">
+                        <StackPanel  Orientation="Horizontal" >
+                            <TextBox 
+                           Tag="&#xE166;"
+                           Name="emailUser"
+                                Style="{ThemeResource TextBoxStyle}"
+                                     InputScope="EmailNameOrAddress"
+                             x:Uid="email"
+                         Width="270" />
+                        </StackPanel>
+                        <TextBlock Name="erroEmail"
+                        Foreground="Red"
+                       FontSize="12"/>
+                    </StackPanel>
+                    <StackPanel Margin="0,0,0,6">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                            <PasswordBox 
+                         Name="SenhaUser" 
+                                Style="{ThemeResource LoginLayoutPassword}"
+                             Tag="&#xE192;"
+                                    x:Uid="senha"
+                  Width="270" />
+                        </StackPanel>
+                        <TextBlock Name="erroSenha"
+                        Foreground="Red"
+                       FontSize="12"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="0,10" HorizontalAlignment="Center">
+                        <StackPanel Orientation="Horizontal"  >
+                            <Button Windows10version1809:CornerRadius="15"
+                          VerticalAlignment="Center" 
+                                Click="Register_Click"
+                     x:Uid="register" 
+                    Name="Register"
+                          Style="{ThemeResource ButtonStyleWhite}"
+                      Width="100"
+                     Height="32" />
+                       <Grid Height="2" Margin="0,0,-2,0" Background="{ThemeResource ButtonSegundarioNormal}" Width="7"/>
+                        <Grid Height="2" Margin="-2,0,0,0" Background="{ThemeResource ButtonPrimarioNormal}" Width="7"/>
+                        <Button 
+                            VerticalAlignment="Center"
+                        x:Uid="enter"    
+                            Style="{ThemeResource ButtonStyle1}"
+                      Width="100"
+                    Height="32" 
+                    Name="Enter"
+                            Click="Enter_Click" />
+                        </StackPanel>
+                        <HyperlinkButton x:Uid="resetKey"
+                                Name="ResetKey"
+                                HorizontalAlignment="Center"
+                                Margin="0,10"
+                                Click="ResetKey_Click"
+                              Foreground="#FF1D6EB2"/>
+
+                    </StackPanel>
+
+                </StackPanel>
+      
+
+        </Grid>
+
+        <ContentDialog Name="PanelReset" >
+            <StackPanel>
+                <StackPanel Margin="0,0,0,8" >
+                    <TextBlock Style="{ThemeResource BaseTextBlockStyle}" Foreground="{ThemeResource Titulo}"  x:Uid="recuperarSenha" />
+                    <TextBlock x:Uid="recuperarRessume"  
+                               MaxWidth="300"
+                               Margin="0,0,0,10"
+                       FontSize="12" 
+                               Opacity="0.6"
+                                Foreground="{ThemeResource SubTexto}" 
+                               TextWrapping="Wrap"  />
+                   
+                        <TextBox 
+                           Tag="&#xE166;"
+                            Style="{ThemeResource TextBoxStyle}"
+                                 InputScope="EmailNameOrAddress"
+                           Name="emailResetUser"
+                             x:Uid="email" 
+                            HorizontalAlignment="Stretch"/> 
+                    <TextBlock Name="erroResetEmail"
+                        Foreground="Red"
+                       FontSize="12"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" >
+                    <Button VerticalAlignment="Center"   
+                     x:Uid="cancelar" 
+                              Style="{ThemeResource ButtonStyleContent}"
+                   Name="Cancelar"
+                            Click="Cancelar_Click"
+                    Width="100"
+                     Height="32" 
+                            Foreground="Red" />
+                    <Button 
+                            VerticalAlignment="Center"  
+                      Width="100"
+                        Click="Recuperar_Click"
+                    Height="32" 
+                    Style="{StaticResource ButtonStyle1}" 
+                      x:Uid="Recuperar"     
+                    Name="Recuperar"  />
+                </StackPanel>
+            </StackPanel>
+        </ContentDialog>
+
+
+        <Grid Background="{ThemeResource CorProgressoRing}"  
+              Visibility="Collapsed"
+              Name="PanelProgress" 
+                       BorderThickness="0" >
+            <StackPanel
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center" 
+                Padding="3"
+                CornerRadius="100"
+                Background="{ThemeResource CorSegundaria}">
+                <ProgressRing IsActive="True"
+                              Width="60"
+                              Height="60"
+                              Foreground="{ThemeResource CorLight}"/>
+            </StackPanel>
+        </Grid>
+  
+        <Grid
+                    Grid.Row="1"  
+                    Name="ToastGrid"
+                    Opacity="10"
+                    Visibility="Collapsed" >
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <FontIcon Foreground="WhiteSmoke" VerticalAlignment="Center" Margin="20,0,0,0" Name="ToastIcon" FontFamily="/Font/ps.ttf#Segoe MDL2 Assets" HorizontalAlignment="Center"/>
+
+            <TextBlock
+                        Name="ToastText"
+                        Grid.Column="1"
+                        Margin="15" 
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        TextWrapping="Wrap"
+                        MaxLines="3"
+                        TextAlignment="Center"
+                        TextTrimming="CharacterEllipsis" />
+        </Grid>
+    </Grid> 
+</Page>

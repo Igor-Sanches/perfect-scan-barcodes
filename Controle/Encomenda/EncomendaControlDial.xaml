@@ -1,0 +1,330 @@
+﻿<UserControl
+    x:Class="Perfect_Scan.Controle.Encomenda.EncomendaControlDial"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Perfect_Scan.Controle.Encomenda"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ButtonBackground}">
+
+        <Grid Visibility="{Binding DialerVisibility, Mode=OneWay}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="12" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="12" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="12" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="12" />
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="1" Grid.Row="1"  
+                Command="{Binding ProcessDialPadLetras}" Style="{StaticResource DialpadButtonStyle}"
+                CommandParameter="Q" Tag="Q" >
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="Q" Foreground="{ThemeResource CorTextoDial}" Style="{StaticResource DialpadNumberStyle}"/>
+                </StackPanel>
+            </Button>
+            <Button Grid.Column="2" Grid.Row="1"
+                Command="{Binding ProcessDialPadLetras}" Style="{StaticResource DialpadButtonStyle}"
+                CommandParameter="W" Tag="W" >
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="W" Foreground="{ThemeResource CorTextoDial}" Style="{StaticResource DialpadNumberStyle}"/>
+                </StackPanel>
+            </Button>
+            <Button Grid.Column="3" Grid.Row="1"
+                Command="{Binding ProcessDialPadLetras}" Style="{StaticResource DialpadButtonStyle}"
+                CommandParameter="E" Tag="E" >
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="E" Foreground="{ThemeResource CorTextoDial}" Style="{StaticResource DialpadNumberStyle}"/>
+                </StackPanel>
+            </Button>
+            <Button Grid.Column="4" Grid.Row="1"
+                Command="{Binding ProcessDialPadLetras}" Style="{StaticResource DialpadButtonStyle}"
+                CommandParameter="R" Tag="R" >
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="R" Foreground="{ThemeResource CorTextoDial}" Style="{StaticResource DialpadNumberStyle}"/>
+                </StackPanel>
+            </Button>
+            <Button Grid.Column="5" Grid.Row="1"
+                Command="{Binding ProcessDialPadLetras}" Style="{StaticResource DialpadButtonStyle}"
+                CommandParameter="T" Tag="T" >
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="T" Foreground="{ThemeResource CorTextoDial}" Style="{StaticResource DialpadNumberStyle}"/>
+                </StackPanel>
+            </Button>
+            <Button Grid.Column="6" Grid.Row="1"
+                Command="{Binding ProcessDialPadLetras}" Style="{StaticResource DialpadButtonStyle}"
+                CommandParameter="Y" Tag="Y" >
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="Y" Foreground="{ThemeResource CorTextoDial}" Style="{StaticResource DialpadNumberStyle}"/>
+                </StackPanel>
+            </Button>
+            <Button Grid.Column="7" Grid.Row="1"
+                Command="{Binding ProcessDialPadLetras}" Style="{StaticResource DialpadButtonStyle}"
+                CommandParameter="U" Tag="U" >
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="U" Foreground="{ThemeResource CorTextoDial}" Style="{StaticResource DialpadNumberStyle}"/>
+                </StackPanel>
+            </Button>
+            <Button Grid.Column="8" Grid.Row="1"
+                Command="{Binding ProcessDialPadLetras}" Style="{StaticResource DialpadButtonStyle}"
+                CommandParameter="I" Tag="I" >
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="I" Foreground="{ThemeResource CorTextoDial}" Style="{StaticResource DialpadNumberStyle}"/>
+                </StackPanel>
+            </Button>
+            <Button Grid.Column="9" Grid.Row="1"
+                Command="{Binding ProcessDialPadLetras}" Style="{StaticResource DialpadButtonStyle}"
+                CommandParameter="O"  >
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="O" Foreground="{ThemeResource CorTextoDial}" Style="{StaticResource DialpadNumberStyle}"/>
+                </StackPanel>
+            </Button>
+
+            <Button Grid.Column="1" Grid.Row="2"
+                Command="{Binding ProcessDialPadLetras}" Style="{StaticResource DialpadButtonStyle}"
+                CommandParameter="P" >
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="P" Foreground="{ThemeResource CorTextoDial}" Style="{StaticResource DialpadNumberStyle}"/>
+                </StackPanel>
+            </Button>
+            <Button Grid.Column="2" Grid.Row="2"
+                Command="{Binding ProcessDialPadLetras}" Style="{StaticResource DialpadButtonStyle}"
+                CommandParameter="A" >
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="A" Foreground="{ThemeResource CorTextoDial}" Style="{StaticResource DialpadNumberStyle}"/>
+                </StackPanel>
+            </Button>
+            <Button Grid.Column="3" Grid.Row="2"
+                Command="{Binding ProcessDialPadLetras}" Style="{StaticResource DialpadButtonStyle}"
+                CommandParameter="S" >
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="S" Foreground="{ThemeResource CorTextoDial}" Style="{StaticResource DialpadNumberStyle}"/>
+                </StackPanel>
+            </Button>
+            <Button Grid.Column="4" Grid.Row="2"
+                Command="{Binding ProcessDialPadLetras}" Style="{StaticResource DialpadButtonStyle}"
+                CommandParameter="D" >
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="D" Foreground="{ThemeResource CorTextoDial}" Style="{StaticResource DialpadNumberStyle}"/>
+                </StackPanel>
+            </Button>
+            <Button Grid.Column="5" Grid.Row="2"
+                Command="{Binding ProcessDialPadLetras}" Style="{StaticResource DialpadButtonStyle}"
+                CommandParameter="F" >
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="F" Foreground="{ThemeResource CorTextoDial}" Style="{StaticResource DialpadNumberStyle}"/>
+                </StackPanel>
+            </Button>
+            <Button Grid.Column="6" Grid.Row="2"
+                Command="{Binding ProcessDialPadLetras}" Style="{StaticResource DialpadButtonStyle}"
+                CommandParameter="G" >
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="G" Foreground="{ThemeResource CorTextoDial}" Style="{StaticResource DialpadNumberStyle}"/>
+                </StackPanel>
+            </Button>
+            <Button Grid.Column="7" Grid.Row="2"
+                Command="{Binding ProcessDialPadLetras}" Style="{StaticResource DialpadButtonStyle}"
+                CommandParameter="H" >
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="H" Foreground="{ThemeResource CorTextoDial}" Style="{StaticResource DialpadNumberStyle}"/>
+                </StackPanel>
+            </Button>
+            <Button Grid.Column="8" Grid.Row="2"
+                Command="{Binding ProcessDialPadLetras}" Style="{StaticResource DialpadButtonStyle}"
+                CommandParameter="J"  >
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="J" Foreground="{ThemeResource CorTextoDial}" Style="{StaticResource DialpadNumberStyle}"/>
+                </StackPanel>
+            </Button>
+            <Button Grid.Column="9" Grid.Row="2"
+                Command="{Binding ProcessDialPadLetras}" Style="{StaticResource DialpadButtonStyle}"
+                CommandParameter="K" >
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="K" Foreground="{ThemeResource CorTextoDial}" Style="{StaticResource DialpadNumberStyle}"/>
+                </StackPanel>
+            </Button>
+
+            <Button Grid.Column="1" Grid.Row="3"
+                Command="{Binding ProcessDialPadLetras}" Style="{StaticResource DialpadButtonStyle}"
+                CommandParameter="L" >
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="L" Foreground="{ThemeResource CorTextoDial}" Style="{StaticResource DialpadNumberStyle}"/>
+                </StackPanel>
+            </Button>
+            <Button Grid.Column="2" Grid.Row="3"
+                Command="{Binding ProcessDialPadLetras}" Style="{StaticResource DialpadButtonStyle}"
+                CommandParameter="Z" >
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="Z" Foreground="{ThemeResource CorTextoDial}" Style="{StaticResource DialpadNumberStyle}"/>
+                </StackPanel>
+            </Button>
+            <Button Grid.Column="3" Grid.Row="3"
+                Command="{Binding ProcessDialPadLetras}" Style="{StaticResource DialpadButtonStyle}"
+                CommandParameter="X" >
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="X" Foreground="{ThemeResource CorTextoDial}" Style="{StaticResource DialpadNumberStyle}"/>
+                </StackPanel>
+            </Button>
+            <Button Grid.Column="4" Grid.Row="3"
+                Command="{Binding ProcessDialPadLetras}" Style="{StaticResource DialpadButtonStyle}"
+                CommandParameter="C" >
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="C" Foreground="{ThemeResource CorTextoDial}" Style="{StaticResource DialpadNumberStyle}"/>
+                </StackPanel>
+            </Button>
+            <Button Grid.Column="5" Grid.Row="3"
+                Command="{Binding ProcessDialPadLetras}" Style="{StaticResource DialpadButtonStyle}"
+                CommandParameter="V" >
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="V" Foreground="{ThemeResource CorTextoDial}" Style="{StaticResource DialpadNumberStyle}"/>
+                </StackPanel>
+            </Button>
+            <Button Grid.Column="6" Grid.Row="3"
+                Command="{Binding ProcessDialPadLetras}" Style="{StaticResource DialpadButtonStyle}"
+                CommandParameter="B" >
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="B" Foreground="{ThemeResource CorTextoDial}" Style="{StaticResource DialpadNumberStyle}"/>
+                </StackPanel>
+            </Button>
+            <Button Grid.Column="7" Grid.Row="3"
+                Command="{Binding ProcessDialPadLetras}" Style="{StaticResource DialpadButtonStyle}"
+                CommandParameter="N" >
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="N" Foreground="{ThemeResource CorTextoDial}" Style="{StaticResource DialpadNumberStyle}"/>
+                </StackPanel>
+            </Button>
+            <Button Grid.Column="8" Grid.Row="3"
+                Command="{Binding ProcessDialPadLetras}" Style="{StaticResource DialpadButtonStyle}"
+                CommandParameter="M" >
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="M" Foreground="{ThemeResource CorTextoDial}" Style="{StaticResource DialpadNumberStyle}"/>
+                </StackPanel>
+            </Button>
+            <Button Grid.Column="9" Grid.Row="3"
+                Command="{Binding ProcessDialPadDelete}" Style="{StaticResource DialpadButtonStyle}" >
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Foreground="{ThemeResource CorTextoDial}" FontFamily="Segoe MDL2 Assets" Text="&#xE750;" Style="{StaticResource DialpadNumberStyle}"/>
+                </StackPanel>
+            </Button>
+
+        </Grid>
+
+        <Grid Visibility="{Binding DialerNumberVisibility, Mode=OneWay}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="12" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="12" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="12" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="12" />
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="1" Grid.Row="1"
+                Command="{Binding ProcessDialPadNumber}" Style="{StaticResource DialpadButtonStyle}"
+                CommandParameter="1" Tag="1" >
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Foreground="{ThemeResource CorTextoDial}" Text="1" Style="{StaticResource DialpadNumberStyle}"/>
+                </StackPanel>
+            </Button>
+            <Button Grid.Column="2" Grid.Row="1" 
+                Command="{Binding ProcessDialPadNumber}" Style="{StaticResource DialpadButtonStyle}"
+                CommandParameter="2">
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Foreground="{ThemeResource CorTextoDial}" Text="2" Style="{StaticResource DialpadNumberStyle}"/>
+                </StackPanel>
+            </Button>
+            <Button Grid.Column="3" Grid.Row="1" 
+                Command="{Binding ProcessDialPadNumber}" Style="{StaticResource DialpadButtonStyle}"
+                CommandParameter="3">
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Foreground="{ThemeResource CorTextoDial}" Text="3" Style="{StaticResource DialpadNumberStyle}"/>
+                </StackPanel>
+            </Button>
+            <Button Grid.Column="1" Grid.Row="2" 
+                Command="{Binding ProcessDialPadNumber}" Style="{StaticResource DialpadButtonStyle}"
+                CommandParameter="4">
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Foreground="{ThemeResource CorTextoDial}" Text="4" Style="{StaticResource DialpadNumberStyle}"/>
+                </StackPanel>
+            </Button>
+            <Button Grid.Column="2" Grid.Row="2" 
+                Command="{Binding ProcessDialPadNumber}" Style="{StaticResource DialpadButtonStyle}"
+                CommandParameter="5">
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Foreground="{ThemeResource CorTextoDial}" Text="5" Style="{StaticResource DialpadNumberStyle}"/>
+                </StackPanel>
+            </Button>
+            <Button Grid.Column="3" Grid.Row="2" 
+                Command="{Binding ProcessDialPadNumber}" Style="{StaticResource DialpadButtonStyle}"
+                CommandParameter="6">
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Foreground="{ThemeResource CorTextoDial}" Text="6" Style="{StaticResource DialpadNumberStyle}"/>
+                </StackPanel>
+            </Button>
+            <Button Grid.Column="1" Grid.Row="3" 
+                Command="{Binding ProcessDialPadNumber}" Style="{StaticResource DialpadButtonStyle}"
+                CommandParameter="7">
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Foreground="{ThemeResource CorTextoDial}" Text="7" Style="{StaticResource DialpadNumberStyle}"/>
+                </StackPanel>
+            </Button>
+            <Button Grid.Column="2" Grid.Row="3" 
+                Command="{Binding ProcessDialPadNumber}" Style="{StaticResource DialpadButtonStyle}"
+                CommandParameter="8">
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Foreground="{ThemeResource CorTextoDial}" Text="8" Style="{StaticResource DialpadNumberStyle}"/>
+                </StackPanel>
+            </Button>
+            <Button Grid.Column="3" Grid.Row="3" 
+                Command="{Binding ProcessDialPadNumber}" Style="{StaticResource DialpadButtonStyle}"
+                CommandParameter="9">
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Foreground="{ThemeResource CorTextoDial}" Text="9" Style="{StaticResource DialpadNumberStyle}"/>
+                </StackPanel>
+            </Button>
+            <Button Grid.Column="1" Grid.Row="4" 
+               Command="{Binding ProcessCopyCommand}" Style="{StaticResource DialpadButtonStyle}" >
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Foreground="{ThemeResource CorTextoDial}" FontFamily="Segoe MDL2 Assets" Text="&#xE8C8;" Style="{StaticResource DialpadNumberStyle}"/>
+                </StackPanel>
+            </Button>
+            <Button Grid.Column="2" Grid.Row="4" 
+                Command="{Binding ProcessDialPadNumber}" Style="{StaticResource DialpadButtonStyle}"
+                CommandParameter="0"   >
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Foreground="{ThemeResource CorTextoDial}" Text="0" Style="{StaticResource DialpadNumberStyle}"/>
+                </StackPanel>
+            </Button>
+            <Button Grid.Column="3" Grid.Row="4" 
+                Command="{Binding ProcessDialPadDelete}" Style="{StaticResource DialpadButtonStyle}" >
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Foreground="{ThemeResource CorTextoDial}" FontFamily="Segoe MDL2 Assets" Text="&#xE750;" Style="{StaticResource DialpadNumberStyle}"/>
+                </StackPanel>
+            </Button>
+        </Grid>
+
+    </Grid>
+</UserControl>
